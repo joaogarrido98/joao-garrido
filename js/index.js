@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createTags();
 
+    submitEmail();
+
     //On scroll progress bar
     window.addEventListener('scroll', () => {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -11,23 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById("myBar").style.width = scrolled + "%";
     });
 
-    //SHOW/HIDE form
-    const letsBuild = document.getElementById("letsBuild");
-    const modal = document.querySelector(".modal");
-    const closeModal = document.querySelector(".close")
-    letsBuild.addEventListener('click', () => {
-        modal.style.display = "block";
-    });
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none"
-    });
-    window.addEventListener("click", (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    });
+    formVisibility();
+    
 
-    // Form submit validation
+  /*  // Form submit validation
     const formName = document.getElementById("formName");
     const formEmail = document.getElementById("formEmail");
     const formText = document.getElementById("formText");
@@ -101,29 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+*/
+});
 
-function fadeIn(el) {
-    el.style.opacity = 0;
-    el.style.display = "block";
-    (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
-function fadeOut(el) {
-    el.style.opacity = 1;
-    (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-            el.style.display = "none";
-        } else {
-            requestAnimationFrame(fade);
-        }
-    })();
-};
-function showError(element, error) {
+/*function showError(element, error) {
     if (error === true) {
         element.style.opacity = '1';
     } else {
@@ -140,7 +110,7 @@ function checkEmail(value) {
     alert.innerHTML = "Incorrect Email format";
     return (false)
 }
-
+*/
 function getYearCopy() {
     let date = new Date();
     let year = date.getFullYear();
@@ -148,7 +118,7 @@ function getYearCopy() {
 }
 
 function createTags() {
-    let tags = ["Html5", "CSS", "jQuery", "Firebase", "C#", "mySQL", "mongoDB", "Bootstrap", "Wordpress & Prestashop"];
+    let tags = ["Html5", "CSS", "jQuery", "Firebase", "C#", "mySQL", "mongoDB", "Bootstrap", "Wordpress & Prestashop", "Notions of nodeJs", "Notions of python"];
     tags.forEach(element => {
         let ul = document.querySelector(".tags");
         let li = document.createElement('li');
@@ -158,4 +128,45 @@ function createTags() {
         li.appendChild(tag);
         ul.appendChild(li);
     });
+}
+
+function formVisibility(){
+    //SHOW/HIDE form
+    const letsBuild = document.getElementById("letsBuild");
+    const modal = document.querySelector(".modal");
+    const closeModal = document.querySelector(".close")
+    letsBuild.addEventListener('click', () => {
+        modal.style.display = "block";
+    });
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none"
+    });
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+
+function submitEmail(){
+    let form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
 }

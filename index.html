@@ -185,6 +185,8 @@
     </div>
     <p>Created by me - João Garrido <span id="year"></span></p>
   </footer>
+
+ <!--modal--> 
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -195,31 +197,13 @@
         </div>
       </div>
       <div class="modal-body">
-        <form id="form">
-          <div class="formInputs">
-            <input type="text" id="formName" name="formName" placeholder="Name" maxlength="30">
-            <div class="alert" id="alert-1">
-              <span><i class="fa fa-exclamation-triangle"></i></span> A man needs a Name
-            </div>
-          </div>
-          <div class="formInputs">
-            <input type="text" id="formEmail" name="formEmail" placeholder="Email" maxlength="255">
-            <div class="alert" id="alert-2">
-              <span><i class="fa fa-exclamation-triangle"></i></span> A man needs an Email
-            </div>
-          </div>
-          <div class="formInputs">
-            <textarea id="formText" name="formMessage" placeholder="Drop an Idea"></textarea>
-            <div class="alert" id="alert-3">
-              <span><i class="fa fa-exclamation-triangle"></i></span> A man needs a Message
-            </div>
-          </div>
-          <button class="submit-button state-0">
-            <span class="pre-state-msg">Submit</span>
-            <span class="current-state-msg hide">Sending...</span>
-            <span class="done-state-msg hide">Sent!</span>
-            <span class="error-state-msg hide">Not Sent! Try Again</span>
-          </button>
+        <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
+          <label>Email:</label>
+          <input type="email" name="email" />
+          <label>Message:</label>
+          <input type="text" name="message" />
+          <button id="my-form-button">Submit</button>
+          <p id="my-form-status"></p>
         </form>
       </div>
       <div class="modal-footer">
@@ -244,6 +228,8 @@
       </div>
     </div>
   </div>
+ <!--modal--> 
+
   <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
   <script src="js/index.js"></script>
 </body>
