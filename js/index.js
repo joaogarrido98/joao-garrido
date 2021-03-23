@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     getYearCopy();
 
+    createTags();
+
     //On scroll progress bar
     window.addEventListener('scroll', () => {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -121,11 +123,6 @@ function fadeOut(el) {
         }
     })();
 };
-function getYearCopy() {
-    let date = new Date();
-    let year = date.getFullYear();
-    document.getElementById("year").innerHTML = "©" + year;
-}
 function showError(element, error) {
     if (error === true) {
         element.style.opacity = '1';
@@ -142,4 +139,23 @@ function checkEmail(value) {
     alert.style.opacity = '1';
     alert.innerHTML = "Incorrect Email format";
     return (false)
+}
+
+function getYearCopy() {
+    let date = new Date();
+    let year = date.getFullYear();
+    document.getElementById("year").innerHTML = "©" + year;
+}
+
+function createTags() {
+    let tags = ["Html5", "CSS", "jQuery", "Firebase", "C#", "mySQL", "mongoDB", "Bootstrap", "Wordpress & Prestashop"];
+    tags.forEach(element => {
+        let ul = document.querySelector(".tags");
+        let li = document.createElement('li');
+        let tag = document.createElement('div');
+        tag.className = "tag";
+        tag.innerHTML = element;
+        li.appendChild(tag);
+        ul.appendChild(li);
+    });
 }
