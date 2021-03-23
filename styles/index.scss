@@ -128,7 +128,7 @@ a {
     &::before{
     content: "";
     position: absolute;
-    background: var(--color-dark);
+    background: var(--color-light);
     bottom: 0;
     left: 0;
     right: 100%;
@@ -140,7 +140,7 @@ a {
       right: 0;
     }
     &:hover{
-      border-color: var(--color-dark) ;
+      border-color: var(--color-light) ;
     }
   }
 
@@ -670,7 +670,7 @@ a {
 
 .date {
   border-top-right-radius: 12px;
-  background: var(--color-light-timeline);
+  background: var(--color-light);
   display: inline-block;
   color: white;
   padding: 10px;
