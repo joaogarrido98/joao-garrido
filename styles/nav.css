@@ -313,16 +313,15 @@
 
 @media (max-width: 768px) {
   #main-navigation-toggle~label {
-    padding: 2px;
     border-width: 2px;
     border-style: solid;
-    border-radius: 12px;
+    border-radius: 6px;
     border-color: var(--color-light);
     background-color: var(--color-tags);
   }
 
   #main-navigation-toggle~label span {
-    border-radius: 12px;
+    border-radius: 8px;
     padding: 2px;
     color: var(--color-primary);
   }

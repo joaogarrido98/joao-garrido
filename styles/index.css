@@ -79,7 +79,7 @@ a {
 }
 
 .sectionPic .introduction .knowMore {
-  margin-top: 2em;
+  margin-top: 1.2em;
   text-decoration: none;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -395,15 +395,15 @@ a {
 }
 
 .skills .hardskills .row ul li.javascript div span {
-  width: 75%;
+  width: 80%;
 }
 
 .skills .hardskills .row ul li.haskell div span {
-  width: 60%;
+  width: 70%;
 }
 
 .skills .hardskills .row ul li.kotlin div span {
-  width: 65%;
+  width: 70%;
 }
 
 .skills .hardskills .row ul li.sql div span {
