@@ -1,0 +1,110 @@
+.columns {
+    flex: 1 1 300px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+//========================
+// Contact Modal
+//========================
+.modal {
+    margin-top: 10vh;
+    display: block;
+    position: fixed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 80vh;
+  
+    .modal-header {
+      background: url(../resources/contactHeader.jpg) no-repeat center;
+      background-size: cover;
+      overflow: hidden;
+      color: #FFFFFF;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      background-color: none;
+
+      .overlay {
+        background-color: rgba(17, 17, 17, 0.850);
+        overflow: hidden;
+        height: 100%;
+        z-index: 2;
+        padding: 25px;
+      }
+    }
+  
+    .modal-body {
+      padding: 2px 16px;
+      background-color: var(--text-white-dark);
+    }
+  
+    .modal-footer {
+      padding: 10px 14px;
+      background-color: var(--color-dark-footer);
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 0 0 8px 8px;
+      height: auto;
+  
+      .columns {
+        display: flex;
+        flex-flow: column;
+        flex: 1 1 200px;
+        font-size: 1rem;
+      }
+  
+      .infos {
+        padding: 10px 10px 0 10px;
+      }
+    }
+  
+    .modal-content {
+      border-radius: 8px;
+      position: relative;
+      margin: auto;
+      padding: 0;
+      width: 50%;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+      animation-name: animatetop;
+      animation-duration: 1s
+    }
+  
+    .close {
+      background: var(--color-light);
+      color: black;
+      line-height: 25px;
+      position: absolute;
+      right: -10px;
+      text-align: center;
+      top: -10px;
+      width: 24px;
+      text-decoration: none;
+      font-weight: bold;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      border-radius: 12px;
+      transition: 0.3s;
+  
+      &:hover,
+      &:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  
+    form {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;     
+    }     
+}

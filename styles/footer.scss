@@ -1,0 +1,166 @@
+//====================
+// button 
+//====================
+.button {
+    border: 2px solid var(--color-light);
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    color: white;
+    padding: 1em 1.25em;
+    font-weight: 400;
+    background-color: transparent;
+    border-radius: 42px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+    outline: none;
+  
+    &:hover {
+      background-color: var(--color-light);
+    }
+  }
+  
+// ==============
+// footer 
+// ==============
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  background-color: var(--color-light);
+  padding: 50px 30px 10px 30px;
+  position: relative;
+  margin-top: 7rem;
+
+  h2 {
+    margin-top: 4rem;
+    text-align: center;
+    color: white;
+  }
+
+  //===============
+  // copyright span
+  //================
+  p {
+    margin-top: 2rem;
+    max-width: 100%;
+    color: white;
+  }
+
+  //===================
+  // social 
+  //==================
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 2rem;
+
+    a {
+      box-shadow: 3px 3px var(--text-white-dark);
+      color: white;
+      background: var(--color-dark-footer);
+      border-radius: 8px;
+      text-decoration: none;
+      font-family: fontawesome;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      margin: 0 20px;
+      -o-transition: all .5s;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      transition: all .5s;
+      -webkit-font-smoothing: antialiased;
+
+      &:nth-of-type(1):hover {
+        background-color: var(--facebook-blue);
+      }
+
+      &:nth-of-type(2):hover {
+        background-color: var(--github-purple);
+      }
+
+      &:nth-of-type(3):hover {
+        background-color: var(--linkedin-blue);
+      }
+
+      &:nth-of-type(4):hover {
+        background-color: var(--stackoverflow-orange);
+      }
+
+      &:hover>i {
+        animation: toBottomFromTop 0.5s var(--te) both;
+      }
+
+      i {
+        position: static;
+        font-style: normal;
+      }
+    }
+
+    a:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  //===================
+  //contact
+  //===================
+  .contactUs {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    margin-top: -7rem;
+    width: 85%;
+    height: auto;
+    padding: 30px;
+    background: url(../resources/contactUS.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+
+    .columns {
+      flex: 1 1 300px;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &:nth-child(1) {
+        flex: 1 1 350px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 600;
+        line-height: 1.125;
+        margin-bottom: 0.67em;
+        letter-spacing: -1px;
+      }
+
+      p {
+        color: white;
+        max-width: 100%;
+        font-size: 1.1rem;
+        margin-top: 0.67em;
+      }
+    }
+
+  }
+}
