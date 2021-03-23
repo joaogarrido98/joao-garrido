@@ -7,8 +7,8 @@
 }
 
 .progress-bar {
-  height: 2px;
-  background: var(--color-dark);
+  height: 3px;
+  background: var(--color-tags);
   width: 0%;
 }
 
@@ -67,12 +67,12 @@ a {
 }
 
 .sectionPic .introduction h3:nth-of-type(2) {
-  -webkit-text-decoration: underline solid var(--color-dark);
-          text-decoration: underline solid var(--color-dark);
+  -webkit-text-decoration: underline solid var(--color-tags);
+          text-decoration: underline solid var(--color-tags);
 }
 
 .sectionPic .introduction h1 {
-  color: var(--color-dark);
+  color: var(--color-tags);
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
 }
@@ -101,7 +101,7 @@ a {
 .sectionPic .introduction .knowMore::before {
   content: "";
   position: absolute;
-  background: var(--color-light);
+  background: var(--color-tags);
   bottom: 0;
   left: 0;
   right: 100%;
@@ -116,7 +116,7 @@ a {
 }
 
 .sectionPic .introduction .knowMore:hover {
-  border-color: var(--color-light);
+  border-color: var(--color-tags);
 }
 
 .sectionPic .image {
@@ -142,7 +142,7 @@ a {
 
 .timeline::before {
   content: '';
-  background: var(--color-light);
+  background: var(--color-tags);
   width: 4px;
   height: 100%;
   position: absolute;
@@ -223,7 +223,7 @@ a {
 }
 
 .timeline a {
-  background: var(--color-light);
+  background: var(--color-tags);
   color: var(--text-white-dark);
   padding: 8px 20px;
   text-transform: uppercase;
@@ -282,7 +282,7 @@ a {
 
 .date {
   border-top-right-radius: 12px;
-  background: var(--color-light);
+  background: var(--color-tags);
   display: inline-block;
   color: white;
   padding: 10px;
@@ -331,8 +331,8 @@ a {
 
 .skills h2,
 .skills h3 {
-  -webkit-text-decoration: underline solid var(--color-dark);
-          text-decoration: underline solid var(--color-dark);
+  -webkit-text-decoration: underline solid var(--color-light);
+          text-decoration: underline solid var(--color-light);
 }
 
 .skills h3 {
@@ -477,7 +477,7 @@ a {
   .contactBtn {
     color: var(--color-primary);
     font-weight: 600;
-    background-color: var(--color-light);
+    background-color: var(--color-tags);
   }
   .sectionPic {
     display: -webkit-box;

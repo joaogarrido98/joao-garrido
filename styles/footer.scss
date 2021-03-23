@@ -2,7 +2,7 @@
 // button 
 //====================
 .button {
-    border: 2px solid var(--color-light);
+    border: 2px solid var(--color-tags);
     height: 2.5em;
     display: flex;
     align-items: center;
@@ -22,7 +22,7 @@
     outline: none;
   
     &:hover {
-      background-color: var(--color-light);
+      background-color: var(--color-tags);
     }
   }
   

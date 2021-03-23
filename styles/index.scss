@@ -10,8 +10,8 @@
 }
 
 .progress-bar {
-  height: 2px;
-  background: var(--color-dark);
+  height: 3px;
+  background: var(--color-tags);
   width: 0%;
 }
 
@@ -60,12 +60,12 @@ a {
       color: var(--text-white-dark);
     
       &:nth-of-type(2) {
-        text-decoration: underline solid var(--color-dark);
+        text-decoration: underline solid var(--color-tags);
       }
     }
 
     h1 {
-      color: var(--color-dark);
+      color: var(--color-tags);
       margin-top: 0.4rem;
       margin-bottom: 0.4rem;
     }
@@ -90,7 +90,7 @@ a {
     &::before{
     content: "";
     position: absolute;
-    background: var(--color-light);
+    background: var(--color-tags);
     bottom: 0;
     left: 0;
     right: 100%;
@@ -102,7 +102,7 @@ a {
       right: 0;
     }
     &:hover{
-      border-color: var(--color-light) ;
+      border-color: var(--color-tags) ;
     }
   }
 
@@ -132,7 +132,7 @@ a {
 
   &::before {
     content: '';
-    background: var(--color-light);
+    background: var(--color-tags);
     width: 4px;
     height: 100%;
     position: absolute;
@@ -216,7 +216,7 @@ a {
 }
 
 .timeline a {
-  background: var(--color-light);
+  background: var(--color-tags);
   color: var(--text-white-dark);
   padding: 8px 20px;
   text-transform: uppercase;
@@ -276,7 +276,7 @@ a {
 
 .date {
   border-top-right-radius: 12px;
-  background: var(--color-light);
+  background: var(--color-tags);
   display: inline-block;
   color: white;
   padding: 10px;
@@ -325,7 +325,7 @@ a {
 
   h2,
   h3 {
-    text-decoration: underline solid var(--color-dark);
+    text-decoration: underline solid var(--color-light);
   }
 
   h3 {
@@ -491,7 +491,7 @@ a {
   .contactBtn {
     color: var(--color-primary);
     font-weight: 600;
-    background-color: var(--color-light);
+    background-color: var(--color-tags);
   }
 
   .sectionPic {

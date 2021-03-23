@@ -43,7 +43,7 @@
           <a href="#life_events" class="knowMore">Discover More!</a>
         </div>
       </div>
-      <div style="text-align: center;" class="life_events" id="life_events" >
+      <div style="text-align: center;" class="life_events" id="life_events">
         <h1 style="display: inline;">Life Events</h1><span> *That matter</span>
       </div>
       <section class="timeline">
@@ -155,7 +155,7 @@
               <div>
                 <span class="animated fadeInLeft"></span>
               </div>
-            </li> 
+            </li>
           </ul>
         </article>
         <h3>Other hard-skills</h3>
@@ -188,7 +188,7 @@
     <p>Created by me - João Garrido <span id="year"></span></p>
   </footer>
 
- <!--modal--> 
+  <!--modal-->
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -199,37 +199,46 @@
       </div>
       <div class="modal-body">
         <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
-          <label>Email:</label>
-          <input type="email" name="email" />
-          <label>Message:</label>
-          <input type="text" name="message" />
-          <button id="my-form-button">Submit</button>
-          <p id="my-form-status"></p>
+          <div class="input-group">
+            <label for="name">Your name:</label>
+            <input type="text" name="name" placeholder="Name">
+          </div>
+          <div class="input-group">
+            <label for="valid-email">Your email:</label>
+            <input type="text" name="email" id="valid-email" placeholder="mail@mail.com">
+            <div class="input-group">
+              <label for="name">Your message:</label>
+              <input type="text" name="Message" placeholder="message">
+            </div>
+            <div class="input-group">
+              <button id="my-form-button">Submit</button>
+              <p id="my-form-status"></p>
+            </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-map-marker"></i><span> Let's Meet</span>
-            <p>Liverpool, United Kingdom</p>
-          </div>
+    </div>
+    <div class="modal-footer">
+      <div class="columns">
+        <div class="infos">
+          <i class="fa fa-map-marker"></i><span> Let's Meet</span>
+          <p>Liverpool, United Kingdom</p>
         </div>
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-phone"></i><span> Let's Talk</span>
-            <p>+351 917518758</p>
-          </div>
+      </div>
+      <div class="columns">
+        <div class="infos">
+          <i class="fa fa-phone"></i><span> Let's Talk</span>
+          <p>+351 917518758</p>
         </div>
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-envelope"></i><span> General</span>
-            <p>joao.melo.garrido@gmail.com</p>
-          </div>
+      </div>
+      <div class="columns">
+        <div class="infos">
+          <i class="fa fa-envelope"></i><span> General</span>
+          <p>joao.melo.garrido@gmail.com</p>
         </div>
       </div>
     </div>
   </div>
- <!--modal--> 
+  <!--modal-->
 
   <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
   <script src="js/index.js"></script>

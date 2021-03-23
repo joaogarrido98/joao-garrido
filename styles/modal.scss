@@ -11,8 +11,8 @@
 // Contact Modal
 //========================
 .modal {
-    margin-top: 10vh;
-    display: block;
+    margin-top: 5vh;
+    display: none;
     position: fixed;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -20,7 +20,7 @@
     top: 0;
     width: 100%;
     overflow-y: scroll;
-    height: 80vh;
+    height: 90vh;
   
     .modal-header {
       background: url(../resources/contactHeader.jpg) no-repeat center;
@@ -41,7 +41,6 @@
     }
   
     .modal-body {
-      padding: 2px 16px;
       background-color: var(--text-white-dark);
     }
   
@@ -79,7 +78,7 @@
     }
   
     .close {
-      background: var(--color-light);
+      background: var(--color-tags);
       color: black;
       line-height: 25px;
       position: absolute;
@@ -103,8 +102,35 @@
     }
   
     form {
-      padding: 10px;
+     padding: 0px 30px;
       display: flex;
       flex-direction: column;     
     }     
+}
+
+.input-group{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    label{
+        font-weight: 600;
+        color: black;
+        padding: 5px;
+    }
+
+    input{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        border-radius: 8px;
+        outline: none;
+        border-style: solid;
+        transition: 0.2s;
+
+        &:focus{  
+            border-color: var(--color-light);
+            border-width: 3px;
+        }
+    }
 }
