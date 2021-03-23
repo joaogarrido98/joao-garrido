@@ -1,0 +1,55 @@
+:root {
+    --color-primary: #232526;
+    --color-secondary: #414345;
+    --color-dark: #f46b45;
+    --color-light: #e09a58;
+    --color-light-timeline: #eea849;
+    --text-white-dark: #c4c4c4;
+    --color-dark-footer: #1a1a1a;
+    --font-family-primary: 'Roboto Mono', monospace;
+    --facebook-blue: #4267B2;
+    --linkedin-blue: #0072b1;
+    --github-purple: #6e5494;
+    --stackoverflow-orange: #f48024;
+    --color-card: #232323;
+    --alert: #e63636;
+    --td: 150ms;
+    --color-tags: #ff5252b3;
+    --te: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  html,
+  body {
+    scroll-behavior: smooth;
+    min-height: 100%;
+  }
+  
+  body {
+    overflow-y: auto;
+    background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)) fixed no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: var(--color-dark);
+    font-family: var(--font-family-primary);
+    overflow-x: hidden;
+    position: static;
+  }
+  
