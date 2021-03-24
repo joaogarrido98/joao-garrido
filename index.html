@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="styles/index.css">
   <link rel="stylesheet" type="text/css" href="styles/app.css">
   <link rel="stylesheet" type="text/css" href="styles/nav.css">
-  <link rel="stylesheet" type="text/css" href="styles/modal.css">
   <link rel="stylesheet" type="text/css" href="styles/footer.css">
   <link rel="icon" href="resources/icon.png" type="image/icon type">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -176,9 +175,49 @@
       </div>
       <div class="columns"><button class="button" id="letsBuild">Contact Me!</button></div>
       <div class="collapse slide">
-        <h2 id="hidden">
-          fnawibfoawbofbwafiawofbawiofbawibfiowabfioabfbwabfiwabfibwaiofbwaiobfawiobfiowbaiabwfioawbf
-        </h2>
+        <div id="hidden">
+          <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
+            <div class="input-group">
+              <input type="text" name="name" placeholder="Name" />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+            <div class="input-group">
+              <input type="text" name="valid-email" placeholder="mail@mail.com" />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="Message" />
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+            <div class="input-group">
+              <button class="action-btn" id="my-form-button">Send Message!</button>
+              <p id="my-form-status"></p>
+            </div>
+          </form>
+          <div class="info">
+            <div class="columns">
+              <div class="infos">
+                <i class="fa fa-map-marker"></i><span> Let's Meet</span>
+                <p>Liverpool, United Kingdom</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="infos">
+                <i class="fa fa-phone"></i><span> Let's Talk</span>
+                <p>+351 917518758</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="infos">
+                <i class="fa fa-envelope"></i><span> General</span>
+                <p>joao.melo.garrido@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <h2>Solving Problems using Code</h2>
@@ -193,63 +232,6 @@
     </div>
     <p>Created by me - João Garrido <span id="year"></span></p>
   </footer>
-
-  <!--modal-->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="overlay">
-          <span class="close">&times;</span>
-          <h2>Ready to get started? Drop an Idea</h2>
-        </div>
-      </div>
-      <div class="modal-body">
-        <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
-          <div class="input-group">
-            <input type="text" name="name" placeholder="Name" />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-          </div>
-          <div class="input-group">
-            <input type="text" name="valid-email" placeholder="mail@mail.com" />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-          </div>
-          <div class="input-group">
-            <input type="text" placeholder="Message" />
-            <span class="highlight"></span>
-            <span class="bar"></span>
-          </div>
-          <div class="input-group">
-            <button class="action-btn" id="my-form-button">Send Message!</button>
-            <p id="my-form-status"></p>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-map-marker"></i><span> Let's Meet</span>
-            <p>Liverpool, United Kingdom</p>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-phone"></i><span> Let's Talk</span>
-            <p>+351 917518758</p>
-          </div>
-        </div>
-        <div class="columns">
-          <div class="infos">
-            <i class="fa fa-envelope"></i><span> General</span>
-            <p>joao.melo.garrido@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--modal-->
-
   <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
   <script src="js/index.js"></script>
 </body>

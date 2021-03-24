@@ -222,4 +222,118 @@
   margin: 0px !important;
   padding: 10px !important;
 }
+
+.input-group {
+  margin-top: 1em;
+  width: 100%;
+}
+
+.input-group input {
+  width: 50%;
+  background: none;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid #5c5c5c;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+.input-group input:focus ~ .bar:before {
+  width: 50%;
+  padding: 0 10px 0 5px;
+}
+
+.input-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.input-group .bar:before {
+  content: "";
+  height: 3px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: var(--color-tags);
+  -webkit-transition: 400ms ease all;
+  transition: 400ms ease all;
+  left: 0%;
+}
+
+.action-btn {
+  background-color: var(--color-tags);
+  text-decoration: none;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  color: white;
+  border: 2px solid;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  outline: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.action-btn:hover {
+  background-color: var(--color-light);
+}
+
+.action-btn::after {
+  content: '';
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  position: absolute;
+  left: calc(50% - 0.75em);
+  top: calc(50% - 0.75em);
+  border: 0.15em solid transparent;
+  border-right-color: white;
+  border-radius: 50%;
+  -webkit-animation: button-anim 0.7s linear infinite;
+          animation: button-anim 0.7s linear infinite;
+  opacity: 0;
+}
+
+.action-btn.loading {
+  color: transparent;
+}
+
+.action-btn.loading::after {
+  opacity: 1;
+}
+
+@-webkit-keyframes button-anim {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes button-anim {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 /*# sourceMappingURL=footer.css.map */
