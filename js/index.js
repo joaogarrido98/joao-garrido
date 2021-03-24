@@ -56,19 +56,11 @@ function createTags() {
 
 function formVisibility() {
     //SHOW/HIDE form
-    const letsBuild = document.getElementById("letsBuild");
-    const modal = document.querySelector(".modal");
-    const closeModal = document.querySelector(".close")
-    letsBuild.addEventListener('click', () => {
-        modal.style.display = "block";
-    });
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none"
-    });
-    window.addEventListener("click", (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    let letsBuild = document.getElementById("letsBuild");
+    let hidden = document.querySelector(".collapse");
+    letsBuild.addEventListener('click', (e) => {
+        e.preventDefault();
+        hidden.classList.toggle("active");
     });
 }
 

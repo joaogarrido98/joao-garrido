@@ -14,12 +14,14 @@
     font-weight: 400;
     background-color: transparent;
     border-radius: 42px;
-    font-size: 1.25rem;
     cursor: pointer;
     -webkit-box-pack: center;
     justify-content: center;
     transition: all .3s ease-in-out;
     outline: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
   
     &:hover {
       background-color: var(--color-tags);
@@ -163,4 +165,26 @@
     }
 
   }
+}
+
+.collapse {
+  margin:0px;
+  max-height:0px;
+  overflow:hidden;
+  transition: all 0.4s;
+
+  &*{
+    box-sizing: border-box;
+  }
+  
+  &.active {
+   color:#444;
+   max-height:100vh;
+   transition: all 0.2s, max-height 2s;
+}
+.slide{
+  box-shadow:none !important;
+  margin:0px !important;
+  padding:10px !important
+}
 }

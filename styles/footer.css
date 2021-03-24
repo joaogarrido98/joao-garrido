@@ -16,13 +16,15 @@
   font-weight: 400;
   background-color: transparent;
   border-radius: 42px;
-  font-size: 1.25rem;
   cursor: pointer;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   outline: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
 }
 
 .button:hover {
@@ -192,5 +194,32 @@
   max-width: 100%;
   font-size: 1.1rem;
   margin-top: 0.67em;
+}
+
+.collapse {
+  margin: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.collapse* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.collapse.active {
+  color: #444;
+  max-height: 100vh;
+  -webkit-transition: all 0.2s, max-height 2s;
+  transition: all 0.2s, max-height 2s;
+}
+
+.collapse .slide {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  margin: 0px !important;
+  padding: 10px !important;
 }
 /*# sourceMappingURL=footer.css.map */
