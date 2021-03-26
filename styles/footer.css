@@ -202,11 +202,14 @@
   overflow: hidden;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.301);
+  border-radius: 10px;
 }
 
-.collapse* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.collapse #hidden {
+  padding-left: 30px;
+  padding-top: 10px;
 }
 
 .collapse.active {

@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
         actionBtn.disabled = true;
         setTimeout(() => actionBtn.classList.remove("loading"), 3000);
     });
+
+    const toogle = document.getElementById('toogle');
+    toogle.addEventListener('change', changeTheme);
 });
 
 /*
@@ -55,7 +58,6 @@ function createTags() {
 }
 
 function formVisibility() {
-    //SHOW/HIDE form
     let letsBuild = document.getElementById("letsBuild");
     let hidden = document.querySelector(".collapse");
     letsBuild.addEventListener('click', (e) => {
@@ -87,4 +89,12 @@ function submitEmail(){
       */
     }
     form.addEventListener("submit", handleSubmit)
+}
+
+function changeTheme(){
+    if(document.body.getAttribute('data-theme') === 'dark'){
+        document.body.removeAttribute('data-theme');
+    }else{
+        document.body.setAttribute('data-theme', 'dark');
+    }
 }

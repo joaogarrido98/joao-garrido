@@ -18,6 +18,12 @@
 </head>
 
 <body>
+  <div class="toogle-switch-container">
+    <label class="toogle-switch">
+      <input type="checkbox" id="toogle">
+      <span class="slider round"></span>
+    </label>
+  </div>
   <header>
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
@@ -176,44 +182,50 @@
       <div class="columns"><button class="button" id="letsBuild">Contact Me!</button></div>
       <div class="collapse slide">
         <div id="hidden">
-          <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
-            <div class="input-group">
-              <input type="text" name="name" placeholder="Name" />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-            </div>
-            <div class="input-group">
-              <input type="text" name="valid-email" placeholder="mail@mail.com" />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-            </div>
-            <div class="input-group">
-              <input type="text" placeholder="Message" />
-              <span class="highlight"></span>
-              <span class="bar"></span>
-            </div>
-            <div class="input-group">
-              <button class="action-btn" id="my-form-button">Send Message!</button>
-              <p id="my-form-status"></p>
-            </div>
-          </form>
-          <div class="info">
-            <div class="columns">
-              <div class="infos">
-                <i class="fa fa-map-marker"></i><span> Let's Meet</span>
-                <p>Liverpool, United Kingdom</p>
+          <div class="contactInfo">
+            <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Name" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
               </div>
-            </div>
-            <div class="columns">
-              <div class="infos">
-                <i class="fa fa-phone"></i><span> Let's Talk</span>
-                <p>+351 917518758</p>
+              <div class="input-group">
+                <input type="text" name="valid-email" placeholder="mail@mail.com" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
               </div>
-            </div>
-            <div class="columns">
-              <div class="infos">
-                <i class="fa fa-envelope"></i><span> General</span>
-                <p>joao.melo.garrido@gmail.com</p>
+              <div class="input-group">
+                <input type="text" placeholder="Message" />
+                <span class="highlight"></span>
+                <span class="bar"></span>
+              </div>
+              <div class="input-group">
+                <button class="action-btn" id="my-form-button">Send Message!</button>
+                <p id="my-form-status"></p>
+              </div>
+            </form>
+            <div class="info contactInfo">
+              <div class="columns">
+                <div class="infos">
+                  <i class="fa fa-map-marker"></i><span> Let's Meet</span>
+                  <p>Liverpool, United Kingdom</p>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="infos">
+                  <i class="fa fa-phone"></i><span> Let's Talk</span>
+                  <address>
+                    <a href="tel:+447585092339">+44 7585092339</a>
+                  </address>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="infos">
+                  <i class="fa fa-envelope"></i><span> General</span>
+                  <address>
+                    <a href="mailto:joao.melo.garrido@gmail.com">joao.melo.garrido@gmail.com</a>
+                  </address>
+                </div>
               </div>
             </div>
           </div>
