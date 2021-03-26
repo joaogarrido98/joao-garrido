@@ -78,48 +78,6 @@ a {
   margin-bottom: 0.4rem;
 }
 
-.sectionPic .introduction .knowMore {
-  margin-top: 1.2em;
-  text-decoration: none;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  color: white;
-  border: 2px solid;
-  padding: 10px;
-  position: absolute;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  outline: 0;
-  cursor: pointer;
-  -webkit-transition: 0.2s ease-in;
-  transition: 0.2s ease-in;
-}
-
-.sectionPic .introduction .knowMore::before {
-  content: "";
-  position: absolute;
-  background: var(--color-tags);
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  top: 0;
-  z-index: -1;
-  -webkit-transition: right 0.2s ease-in;
-  transition: right 0.2s ease-in;
-}
-
-.sectionPic .introduction .knowMore:hover::before {
-  right: 0;
-}
-
-.sectionPic .introduction .knowMore:hover {
-  border-color: var(--color-tags);
-}
-
 .sectionPic .image {
   -webkit-box-align: end;
       -ms-flex-align: end;

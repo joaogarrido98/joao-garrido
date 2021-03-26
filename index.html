@@ -12,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="styles/app.css">
   <link rel="stylesheet" type="text/css" href="styles/nav.css">
   <link rel="stylesheet" type="text/css" href="styles/footer.css">
+  <link rel="stylesheet" type="text/css" href="styles/colapse.css">
   <link rel="icon" href="resources/icon.png" type="image/icon type">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Discover João</title>
@@ -45,7 +46,7 @@
           <h3><span>&#60;</span>Hello, My Name Is<span>&#62;</span></h3>
           <h1>João Garrido</h1>
           <h3>A Back-end Developer</h3>
-          <a href="#life_events" class="knowMore">Discover More!</a>
+            <a href="#life_events" class="knowMore">Discover More!</a>
         </div>
       </div>
       <div style="text-align: center;" class="life_events" id="life_events">
@@ -179,7 +180,9 @@
       <div class="columns">
         <p>Interest in making a team? I'm more than welcome to talk!</p>
       </div>
-      <div class="columns"><button class="button" id="letsBuild">Contact Me!</button></div>
+      <div class="columns">
+        <a class="knowMore" id="letsBuild">Contact Me!</a>
+      </div>
       <div class="collapse slide">
         <div id="hidden">
           <div class="contactInfo">
@@ -205,13 +208,13 @@
               </div>
             </form>
             <div class="info contactInfo">
-              <div class="columns">
+              <div class="">
                 <div class="infos">
                   <i class="fa fa-map-marker"></i><span> Let's Meet</span>
                   <p>Liverpool, United Kingdom</p>
                 </div>
               </div>
-              <div class="columns">
+              <div class="">
                 <div class="infos">
                   <i class="fa fa-phone"></i><span> Let's Talk</span>
                   <address>
@@ -219,7 +222,7 @@
                   </address>
                 </div>
               </div>
-              <div class="columns">
+              <div class="">
                 <div class="infos">
                   <i class="fa fa-envelope"></i><span> General</span>
                   <address>
@@ -242,7 +245,7 @@
       <a target="_blank" href="https://stackoverflow.com/users/12801831/jo%c3%a3o-melo-garrido"><i
           class="fa-lg fa-stack-overflow"></i></a>
     </div>
-    <p>Created by me - João Garrido <span id="year"></span></p>
+    <p class="copyright">Created by me - João Garrido <span id="year"></span></p>
   </footer>
   <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
   <script src="js/index.js"></script>

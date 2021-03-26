@@ -99,15 +99,15 @@ body {
   transition: .6s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--color-tags);
 }
 
-input:focus + .slider {
+input:focus+.slider {
   outline: none;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(20px);
 }
 
@@ -117,4 +117,43 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.knowMore {
+  z-index: 10;
+  margin-top: 1.2em;
+  text-decoration: none;
+  max-width: fit-content;
+  color: white;
+  border: 2px solid;
+  padding: 10px;
+  position: absolute;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.knowMore::before {
+  content: "";
+  position: absolute;
+  background: var(--color-tags);
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  top: 0;
+  z-index: -1;
+  transition: right 0.2s ease-in;
+}
+
+.knowMore:hover::before {
+  right: 0;
+}
+
+.knowMore:hover {
+  border-color: var(--color-tags);
 }
