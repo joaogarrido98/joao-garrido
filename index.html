@@ -46,7 +46,7 @@
           <h3><span>&#60;</span>Hello, My Name Is<span>&#62;</span></h3>
           <h1>João Garrido</h1>
           <h3>A Back-end Developer</h3>
-            <a href="#life_events" class="knowMore">Discover More!</a>
+          <a href="#life_events" class="knowMore">Discover More!</a>
         </div>
       </div>
       <div style="text-align: center;" class="life_events" id="life_events">
@@ -186,48 +186,52 @@
       <div class="collapse slide">
         <div id="hidden">
           <div class="contactInfo">
-            <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
-              <div class="input-group">
-                <input type="text" name="name" placeholder="Name" autocomplete="off"/>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-              </div>
-              <div class="input-group">
-                <input type="text" name="valid-email" placeholder="mail@mail.com" autocomplete="off"/>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-              </div>
-              <div class="input-group">
-                <input type="text" placeholder="Message" autocomplete="off"/>
-                <span class="highlight"></span>
-                <span class="bar"></span>
-              </div>
-              <div class="input-group">
-                <button class="action-btn" id="my-form-button">Send Message!</button>
-                <p id="my-form-status"></p>
-              </div>
-            </form>
-            <div class="info contactInfo">
-              <div class="">
-                <div class="infos">
-                  <i class="fa fa-map-marker"></i><span> Let's Meet</span>
-                  <p>Liverpool, United Kingdom</p>
+            <div class="sides">
+              <form id="my-form" action="https://formspree.io/f/mdoynerd" method="POST">
+                <div class="floating">
+                  <input class="floating__input" name="name" type="text" placeholder="Enter your name" />
+                  <label class="floating__label" data-content="Enter your name">
+                 </label>
                 </div>
-              </div>
-              <div class="">
-                <div class="infos">
-                  <i class="fa fa-phone"></i><span> Let's Talk</span>
-                  <address>
-                    <a href="tel:+447585092339">+44 7585092339</a>
-                  </address>
+                <div class="floating">
+                  <input class="floating__input" name="valid-email" type="text" placeholder="Enter your email" />
+                  <label class="floating__label" data-content="Enter your email">
+                 </label>
                 </div>
-              </div>
-              <div class="">
-                <div class="infos">
-                  <i class="fa fa-envelope"></i><span> General</span>
-                  <address>
-                    <a href="mailto:joao.melo.garrido@gmail.com">joao.melo.garrido@gmail.com</a>
-                  </address>
+                <div class="floating">
+                  <input class="floating__input" name="message" type="text" placeholder="Enter your message" />
+                  <label class="floating__label" data-content="Enter your message">
+                 </label>
+                </div>
+                <div>
+                  <button class="action-btn" id="my-form-button">Send Message!</button>
+                  <p id="my-form-status"></p>
+                </div>
+              </form>
+            </div>
+            <div class="sides">
+              <div class="info contactInfo">
+                <div class="">
+                  <div class="infos">
+                    <i class="fa fa-map-marker"></i><span> Let's Meet</span>
+                    <p>Liverpool, United Kingdom</p>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="infos">
+                    <i class="fa fa-phone"></i><span> Let's Talk</span>
+                    <address>
+                      <a href="tel:+447585092339">+44 7585092339</a>
+                    </address>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="infos">
+                    <i class="fa fa-envelope"></i><span> General</span>
+                    <address>
+                      <a href="mailto:joao.melo.garrido@gmail.com">joao.melo.garrido@gmail.com</a>
+                    </address>
+                  </div>
                 </div>
               </div>
             </div>
