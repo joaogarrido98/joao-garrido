@@ -64,21 +64,21 @@ body {
   position: static;
 }
 
-.toogle-switch-container {
+.toggle-switch-container {
   position: fixed;
   bottom: 5px;
   left: 5px;
   z-index: 10;
 }
 
-.toogle-switch {
+.toggle-switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
 
-.toogle-switch input {
+.toggle-switch input {
   opacity: 0;
   width: 0;
   height: 0;

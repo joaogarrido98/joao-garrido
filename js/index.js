@@ -1,29 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+    progressTop();
+
     getYearCopy();
 
     createTags();
 
-    submitEmail();
-
-    //On scroll progress bar
-    window.addEventListener('scroll', () => {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.width = scrolled + "%";
-    });
-
     formVisibility();
 
-    const actionBtn = document.querySelector(".action-btn");
-    actionBtn.addEventListener('click', () => {
-        actionBtn.classList.add("loading");
-        actionBtn.disabled = true;
-        setTimeout(() => actionBtn.classList.remove("loading"), 3000);
-    });
+    submitEmail();
 
-    const toogle = document.getElementById('toogle');
-    toogle.addEventListener('change', changeTheme);
+    submitAnimation();
+
+    toggleTheme();
+
+    progressAnimation();
 });
 
 /*
@@ -44,8 +34,17 @@ function getYearCopy() {
     document.getElementById("year").innerHTML = "©" + year;
 }
 
+function progressTop() {
+    window.addEventListener('scroll', () => {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+    });
+}
+
 function createTags() {
-    let tags = ["HTML5", "CSS3", "jQuery", "Bootstrap","Wordpress & Prestashop", "C#","Beginner Assembly","Beginner of Node.js", "Notions of python", "mySQL", "mongoDB", "Firebase"];
+    let tags = ["HTML5", "CSS3", "jQuery", "Bootstrap", "Wordpress & Prestashop", "C#", "Beginner Assembly", "Beginner of Node.js", "Notions of python", "mySQL", "mongoDB", "Firebase"];
     tags.forEach(element => {
         let ul = document.querySelector(".tags");
         let li = document.createElement('li');
@@ -66,11 +65,11 @@ function formVisibility() {
     });
 }
 
-function submitEmail(){
+function submitEmail() {
     let form = document.getElementById("my-form");
 
     async function handleSubmit(event) {
-      event.preventDefault();
+        event.preventDefault();
         /*
       let status = document.getElementById("my-form-status");
       let data = new FormData(event.target);
@@ -91,10 +90,46 @@ function submitEmail(){
     form.addEventListener("submit", handleSubmit)
 }
 
-function changeTheme(){
-    if(document.body.getAttribute('data-theme') === 'dark'){
+function changeTheme() {
+    if (document.body.getAttribute('data-theme') === 'dark') {
         document.body.removeAttribute('data-theme');
-    }else{
+    } else {
         document.body.setAttribute('data-theme', 'dark');
+    }
+}
+
+function submitAnimation() {
+    const actionBtn = document.querySelector(".action-btn");
+    actionBtn.addEventListener('click', () => {
+        actionBtn.classList.add("loading");
+        actionBtn.disabled = true;
+        setTimeout(() => actionBtn.classList.remove("loading"), 3000);
+    });
+}
+
+function toggleTheme() {
+    const toggle = document.getElementById('toggle');
+    toggle.addEventListener('change', changeTheme);
+}
+
+function progressAnimation() {
+    document.addEventListener("scroll", function (event) {
+        const animatedBoxes = document.getElementsByClassName("animated");
+        const windowOffsetTop = window.innerHeight + window.scrollY;
+
+        Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+            const animatedBoxOffsetTop = animatedBox.offsetTop;
+
+            if (windowOffsetTop >= animatedBoxOffsetTop) {
+                addClass(animatedBox, "fadeInLeft");
+            }
+        });
+    });
+}
+
+function addClass(element, className) {
+    const arrayClasses = element.className.split(" ");
+    if (arrayClasses.indexOf(className) === -1) {
+        element.className += " " + className;
     }
 }
