@@ -23,25 +23,24 @@
 
 .action-btn {
   background-color: var(--color-tags);
-  text-decoration: none;
   width: 100%;
   margin-top: 1rem;
   color: white;
-  border: 2px solid;
+  border: 2px solid white;
   font-size: 15px;
   letter-spacing: 2px;
   border-radius: 4px;
   outline: 0;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 16px;
   cursor: pointer;
   position: relative;
   display: block;
   transition: 0.2s ease-in;
 
   &:hover {
-    background-color: var(--color-light);
+    background-color: var(--color-tags-darker);
   }
 
   &::after {
@@ -87,16 +86,18 @@
   padding: 20px;
 
   .sides {
-    flex: 1;
+    flex: 1 300px;
     width: 100%;
     background-color: white;
     padding: 12px;
+    padding-bottom: 0px;
     box-shadow: 10px 10px 16px 1px;
     border-radius: 8px;
     margin: 20px;
 
     form {
       padding: 10px;
+      padding-bottom: 0px;
     }
   }
 }

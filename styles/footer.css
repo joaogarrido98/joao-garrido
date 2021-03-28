@@ -116,10 +116,10 @@
 }
 
 .footer .social a {
-  -webkit-box-shadow: 3px 3px var(--text-white-dark);
-          box-shadow: 3px 3px var(--text-white-dark);
+  -webkit-box-shadow: 3px 3px var(--color-secondary);
+          box-shadow: 3px 3px var(--color-secondary);
   color: white;
-  background: var(--color-dark-footer);
+  background: var(--color-primary);
   border-radius: 8px;
   text-decoration: none;
   font-family: fontawesome;
