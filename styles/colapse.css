@@ -100,7 +100,6 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 20px;
 }
 
 .contactInfo .sides {
@@ -118,7 +117,6 @@
 }
 
 .contactInfo .sides form {
-  padding: 10px;
   padding-bottom: 0px;
 }
 

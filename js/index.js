@@ -45,7 +45,7 @@ function getYearCopy() {
 }
 
 function createTags() {
-    let tags = ["Html5", "CSS", "jQuery", "Firebase", "C#", "mySQL", "mongoDB", "Bootstrap", "Wordpress & Prestashop", "Notions of nodeJs", "Notions of python"];
+    let tags = ["HTML5", "CSS3", "jQuery", "Bootstrap","Wordpress & Prestashop", "C#","Beginner Assembly","Beginner of Node.js", "Notions of python", "mySQL", "mongoDB", "Firebase"];
     tags.forEach(element => {
         let ul = document.querySelector(".tags");
         let li = document.createElement('li');

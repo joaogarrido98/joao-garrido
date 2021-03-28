@@ -357,7 +357,7 @@ a {
 }
 
 .skills .hardskills .row ul li.haskell div span {
-  width: 70%;
+  width: 55%;
 }
 
 .skills .hardskills .row ul li.kotlin div span {
@@ -365,7 +365,7 @@ a {
 }
 
 .skills .hardskills .row ul li.sql div span {
-  width: 60%;
+  width: 70%;
 }
 
 .fadeInLeft {
@@ -389,29 +389,20 @@ a {
   }
 }
 
-@media (max-width: 1100px) {
-  .modal {
-    padding-top: 10%;
-  }
-  .modal-content {
-    width: 80% !important;
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .timeline {
     max-width: 90%;
   }
   .timeline::before {
-    left: 50px;
+    left: 30px;
   }
   .timeline .timeline-img {
-    left: 50px;
+    left: 30px;
   }
   .timeline .timeline-content {
     max-width: 100%;
     width: auto;
-    margin-left: 90px;
+    margin-left: 70px;
   }
   .timeline .timeline-item:nth-child(even) .timeline-content {
     float: none;
@@ -430,9 +421,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  .modal {
-    padding-top: 15%;
-  }
   .contactBtn {
     color: var(--color-primary);
     font-weight: 600;
@@ -480,23 +468,12 @@ a {
         flex-basis: 100%;
     height: 0;
   }
-  .social {
-    margin-top: 0 !important;
-  }
   .social a {
     margin-top: 1rem !important;
   }
 }
 
 @media (max-width: 360px) {
-  .modal {
-    padding-top: 15%;
-  }
-  h1 {
-    font-size: calc(1rem + 3vmin);
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
   .social a:nth-child(1):hover {
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
