@@ -51,12 +51,12 @@
 .action-btn::after {
   content: '';
   display: block;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.4em;
+  height: 1.4em;
   position: absolute;
   left: calc(50% - 0.75em);
-  top: calc(50% - 0.75em);
-  border: 0.15em solid transparent;
+  top: calc(50% - 0.85em);
+  border: 0.2em solid transparent;
   border-right-color: white;
   border-radius: 50%;
   -webkit-animation: button-anim 0.7s linear infinite;
