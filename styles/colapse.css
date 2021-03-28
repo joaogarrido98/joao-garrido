@@ -109,17 +109,16 @@
       -ms-flex: 1;
           flex: 1;
   width: 100%;
+  background-color: white;
+  padding: 12px;
+  -webkit-box-shadow: 10px 10px 16px 1px;
+          box-shadow: 10px 10px 16px 1px;
+  border-radius: 8px;
+  margin: 20px;
 }
 
 .contactInfo .sides form {
   padding: 10px;
-}
-
-form {
-  background-color: white;
-  padding: 12px;
-  -webkit-box-shadow: 2px 2px 16px 3px;
-          box-shadow: 2px 2px 16px 3px;
 }
 
 .floating {
@@ -155,11 +154,15 @@ form {
 }
 
 .floating__input {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 1.8rem 0 0.6rem 1rem;
   -webkit-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
   caret-color: var(--color-tags);
-  border-bottom: 0.1rem solid var(--input__border);
+  border-bottom: 2px solid var(--input__border);
 }
 
 .floating:hover .floating__input {
@@ -167,19 +170,19 @@ form {
 }
 
 .floating__input::-webkit-input-placeholder {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .floating__input:-ms-input-placeholder {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .floating__input::-ms-input-placeholder {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .floating__input::placeholder {
-  color: transparent;
+  color: rgba(0, 0, 0, 0);
 }
 
 .floating__label {
@@ -211,20 +214,20 @@ form {
 .floating__label::after {
   bottom: 1rem;
   content: "";
-  height: 0.1rem;
+  height: 2px;
   position: absolute;
-  -webkit-transition: opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
-  transition: transform 180ms cubic-bezier(0.4, 0, 0.2, 1), opacity 180ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   left: 0;
   top: 100%;
-  margin-top: -0.1rem;
+  margin-top: -0.12rem;
   -webkit-transform: scale3d(0, 1, 1);
           transform: scale3d(0, 1, 1);
   width: 100%;
-  background-color: var(--color__accent);
+  background-color: var(--color-tags);
 }
 
 .floating__input:focus + .floating__label::after {
@@ -245,6 +248,7 @@ form {
 }
 
 .floating__input:focus + .floating__label::before {
-  color: var(--color__accent);
+  color: var(--color-tags);
+  font-weight: 600;
 }
 /*# sourceMappingURL=colapse.css.map */
