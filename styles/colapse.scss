@@ -79,6 +79,37 @@
   }
 }
 
+.info{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .info_map{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      .wrapper_info{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .infos{
+          flex: 1 300px;
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+          flex-direction: column;
+          margin: 10px;
+
+          address a{
+            overflow-wrap: anywhere;
+          }
+        }
+      }
+    }
+}
 
 .contactInfo {
   display: flex;
