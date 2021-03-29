@@ -157,7 +157,7 @@ function closeOnChoice(){
             div.addEventListener('click', () => {
                 let check = document.querySelector("#nav-check");
                 if (!check.checked) {
-                    check.checked = false;
+                    check.checked = true;
                     let top = document.querySelector(".top-bar");
                     let middle = document.querySelector(".middle-bar");
                     let bottom = document.querySelector(".bottom-bar");
