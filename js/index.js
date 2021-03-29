@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollChange();
 
     showMenu();
+
+    closeOnChoice();
 });
 
 /*
@@ -136,18 +138,31 @@ function scrollChange() {
     });
 }
 
-
-function showMenu() {
-    let btn = document.querySelector(".nav-btn");
+function menuToggle() {
     let menu = document.querySelector(".nav-links");
     let top = document.querySelector(".top-bar");
     let middle = document.querySelector(".middle-bar");
     let bottom = document.querySelector(".bottom-bar");
+    menu.classList.toggle("actived");
+    top.classList.toggle("open");
+    middle.classList.toggle("open");
+    bottom.classList.toggle("open");
+}
+
+function showMenu() {
+    let btn = document.querySelector(".nav-btn");
     btn.addEventListener('click', (e) => {
         e.preventDefault();
-        menu.classList.toggle("actived");
-        top.classList.toggle("open");
-        middle.classList.toggle("open");
-        bottom.classList.toggle("open");
+        menuToggle();
     });
+}
+
+
+function closeOnChoice() {
+    [...document.querySelectorAll('.pages')]
+        .forEach(div => {
+            div.addEventListener('click', () => {
+                menuToggle();
+            });
+        });
 }
