@@ -111,3 +111,17 @@ body {
 .knowMore:hover {
   border-color: var(--color-tags);
 }
+
+.progress-container {
+  width: 100%;
+  position: fixed;
+  height: 2px;
+  z-index: 1000;
+  background: var(--color-secondary);
+}
+
+.progress-bar {
+  height: 2px;
+  background: var(--color-tags);
+  width: 0%;
+}
