@@ -141,31 +141,33 @@ function scrollChange() {
 function changeBurger() {
     let btn = document.querySelector(".nav-btn");
     btn.addEventListener('click', () => {
-        let top = document.querySelector(".top-bar");
-        let middle = document.querySelector(".middle-bar");
-        let bottom = document.querySelector(".bottom-bar");
-
-        top.classList.toggle("open");
-        middle.classList.toggle("open");
-        bottom.classList.toggle("open");
+        burger();
     });
 }
 
-function closeOnChoice(){
+function closeOnChoice() {
     [...document.querySelectorAll('.pages')]
         .forEach(div => {
             div.addEventListener('click', () => {
-                let check = document.querySelector("#nav-check");
-                if (check.checked) {
-                    check.checked = true;
-                    let top = document.querySelector(".top-bar");
-                    let middle = document.querySelector(".middle-bar");
-                    let bottom = document.querySelector(".bottom-bar");
-
-                    top.classList.toggle("open");
-                    middle.classList.toggle("open");
-                    bottom.classList.toggle("open");
-                }
+                burger();
+                document.querySelector("#nav-check").checked = false;
             });
         });
+}
+
+function burger() {
+    let check = document.querySelector("#nav-check");
+    let top = document.querySelector(".top-bar");
+    let middle = document.querySelector(".middle-bar");
+    let bottom = document.querySelector(".bottom-bar");
+    if (check.checked) {
+        top.classList.remove("open");
+        middle.classList.remove("open");
+        bottom.classList.remove("open");
+    } else {
+        top.classList.add("open");
+        middle.classList.add("open");
+        bottom.classList.add("open");
+    }
+
 }
