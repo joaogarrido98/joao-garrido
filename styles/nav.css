@@ -154,19 +154,18 @@
     transition: .25s ease-in-out;
     border-top: 3px solid var(--color-tags);
   }
-  .nav > .nav-btn > label:hover,
-  .nav #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover {
     cursor: pointer;
   }
   .nav > .nav-links > a {
     display: block;
     width: 80%;
   }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
+  .nav .nav-links {
     height: 0px;
   }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(35vh);
+  header .nav .actived {
+    height: 35vh !important;
   }
 }
 /*# sourceMappingURL=nav.css.map */
