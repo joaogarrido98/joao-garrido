@@ -6,55 +6,36 @@
   background: var(--color-secondary);
 }
 
-.progress-bar {
+.progress-container .progress-bar {
   height: 3px;
   background: var(--color-tags);
   width: 0%;
 }
 
-h1 {
+.progress-container h1 {
   font-size: calc(1.5rem + 4vmin);
   font-weight: 700;
   margin-bottom: 2rem;
 }
 
-p {
+.progress-container p {
   line-height: 1.4;
 }
 
-a {
+.progress-container a {
   font-weight: 700;
 }
 
-.main-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  max-width: 80vw;
-  padding: 1rem;
-  color: white;
-}
-
-.main-content > * + * {
-  margin-top: 1.5rem;
-}
-
 .sectionPic {
+  /*font-family: 'Rubik', sans-serif;*/
   font-size: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 80vh;
-  margin-top: 20vh;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sectionPic .introduction {

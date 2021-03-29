@@ -77,16 +77,16 @@
 }
 
 .footer .contactUs .columns h1 {
-  font-size: calc(1.5rem + 2vmin);
+  font-size: 1.8rem;
   color: white;
   font-weight: 600;
   line-height: 1.125;
   margin-bottom: 0.67em;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
 }
 
 .footer .contactUs .columns p {
-  font-size: calc(0.4rem + 2vmin);
+  font-size: 1rem;
   color: white;
   max-width: 100%;
   margin-top: 0.67em;

@@ -8,6 +8,10 @@
   <meta name="keywords" content="curriculum, cv, programmer, Back-end, coding, programming, Portfolio, Projects" />
   <meta name="author" content="João Garrido">
   <meta name="copyright" content="João Garrido">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/index.css">
   <link rel="stylesheet" type="text/css" href="styles/app.css">
   <link rel="stylesheet" type="text/css" href="styles/nav.css">
@@ -19,12 +23,6 @@
 </head>
 
 <body>
-  <div class="toggle-switch-container">
-    <label class="toggle-switch">
-      <input type="checkbox" id="toggle">
-      <span class="slider round"></span>
-    </label>
-  </div>
   <header>
     <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
@@ -174,7 +172,7 @@
   <footer class="footer">
     <div class="contactUs" id="contactForm">
       <div class="columns">
-        <h1>Start a project</h1>
+        <h1>Let's create magic</h1>
       </div>
       <div class="columns">
         <p>Interest in making a team? I'm more than welcome to talk!</p>
@@ -198,40 +196,24 @@
                   </label>
                 </div>
                 <div class="floating">
+                  <input class="floating__input" name="message" type="text" placeholder="Phone number" />
+                  <label class="floating__label" data-content="Phone number">
+                  </label>
+                </div>
+                <div class="floating">
                   <input class="floating__input" name="message" type="text" placeholder="Quick message" />
                   <label class="floating__label" data-content="Quick message">
                   </label>
                 </div>
-                <div>
+                <div class="floating">
                   <button class="action-btn " id="my-form-button">Send Message!</button>
                   <p id="my-form-status"></p>
                 </div>
+                <div class="privacy">
+                  <p class="personal">By clicking the button I agree with the collection and processing of my personal
+                    data as described in the <span><a href="/privacy.html">Privacy policy</a></span>.</p>
+                </div>
               </form>
-            </div>
-            <div class="sides">
-              <div class="info">
-                <div class="info_map">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2379.2380205338204!2d-2.9360022842679987!3d53.39268197998874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b205238591ea5%3A0xc2b83691f37e75d6!2sSmithdown%20Rd%2C%20Liverpool%2C%20UK!5e0!3m2!1sen!2spt!4v1616957871217!5m2!1sen!2spt"
-                    width="100%" style="border:0;" loading="eager"></iframe>
-                </div>
-                <div class="info_map">
-                  <div class="wrapper_info">
-                    <div class="infos">
-                      <i class="fa fa-phone"></i><span> Let's Talk</span>
-                      <address>
-                        <a href="tel:+447585092339">+44 7585092339</a>
-                      </address>
-                    </div>
-                    <div class="infos">
-                      <i class="fa fa-envelope"></i><span> General</span>
-                      <address>
-                        <a href="mailto:joao.melo.garrido@gmail.com">joao.melo.garrido@gmail.com</a>
-                      </address>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

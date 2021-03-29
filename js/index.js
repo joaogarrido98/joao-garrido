@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     submitAnimation();
 
-    toggleTheme();
-
     progressAnimation();
 });
 
@@ -90,14 +88,6 @@ function submitEmail() {
     form.addEventListener("submit", handleSubmit)
 }
 
-function changeTheme() {
-    if (document.body.getAttribute('data-theme') === 'dark') {
-        document.body.removeAttribute('data-theme');
-    } else {
-        document.body.setAttribute('data-theme', 'dark');
-    }
-}
-
 function submitAnimation() {
     const actionBtn = document.querySelector(".action-btn");
     actionBtn.addEventListener('click', () => {
@@ -105,11 +95,6 @@ function submitAnimation() {
         actionBtn.disabled = true;
         setTimeout(() => actionBtn.classList.remove("loading"), 3000);
     });
-}
-
-function toggleTheme() {
-    const toggle = document.getElementById('toggle');
-    toggle.addEventListener('change', changeTheme);
 }
 
 function progressAnimation() {
