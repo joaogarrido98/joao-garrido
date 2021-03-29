@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     submitAnimation();
 
     progressAnimation();
+
+    scrollChange();
 });
 
 /*
@@ -117,4 +119,17 @@ function addClass(element, className) {
     if (arrayClasses.indexOf(className) === -1) {
         element.className += " " + className;
     }
+}
+
+function scrollChange() {
+    const nav = document.querySelector('.nav')
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            nav.style.backgroundColor = 'var(--color-nav)';
+            nav.style.boxShadow = '0 20px 25px -15px rgba(0, 0, 0, .6)'
+        } else {
+            nav.style.backgroundColor = 'transparent';
+            nav.style.boxShadow = 'none'
+        }
+    })
 }

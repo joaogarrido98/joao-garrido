@@ -7,22 +7,22 @@
 }
 
 .progress-container .progress-bar {
-  height: 3px;
+  height: 2px;
   background: var(--color-tags);
   width: 0%;
 }
 
-.progress-container h1 {
+h1 {
   font-size: calc(1.5rem + 4vmin);
   font-weight: 700;
   margin-bottom: 2rem;
 }
 
-.progress-container p {
+p {
   line-height: 1.4;
 }
 
-.progress-container a {
+a {
   font-weight: 700;
 }
 
