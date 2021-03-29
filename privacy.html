@@ -21,25 +21,23 @@
 <body>
     <header>
         <div class="nav">
-            <input type="checkbox" id="nav-check">
             <div class="nav-header">
                 <div class="nav-title">
-                    <a href="#main">{ JG }</a>
+                    <a href="index.html">{ JG }</a>
                 </div>
             </div>
             <div class="nav-btn">
                 <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
                 </label>
             </div>
-
             <div class="nav-links">
-                <a href="index.html" id="active">{ Home }</a>
-                <a href="index.html#life_events">{ About }</a>
-                <a href="index.html#projects">{ Projects }</a>
-                <a href="index.html#contact">{ Contact }</a>
+                <a href="index.html#main" class="pages">{ Home }</a>
+                <a href="index.html#life_events" class="pages">{ About }</a>
+                <a href="index.html#projects" class="pages">{ Projects }</a>
+                <a href="index.html#contact" class="pages">{ Contact }</a>
             </div>
         </div>
     </header>
@@ -153,18 +151,18 @@
         </div>
     </div>
 </body>
+<script src="js/index.js"></script>
+<script src="js/app.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HEC18HCD2V"></script>
 <script>
-    const nav = document.querySelector('.nav')
-    window.addEventListener('scroll', () => {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            nav.style.backgroundColor = 'var(--color-nav)';
-            nav.style.boxShadow = '0 20px 25px -15px rgba(0, 0, 0, .6)'
-            nav.style.marginTop = "0";
-        } else {
-            nav.style.backgroundColor = 'transparent';
-            nav.style.boxShadow = 'none';
-        }
-    })
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HEC18HCD2V');
 </script>
 
 </html>
