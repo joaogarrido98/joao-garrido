@@ -207,11 +207,10 @@
 
 .floating .floating:hover,
 .floating .floating:focus-within {
-  background-color: black;
+  background-color: var(--input__border--hover);
 }
 
 .floating .floating__input {
-  outline: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
