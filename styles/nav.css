@@ -122,8 +122,8 @@
     top: 5px;
   }
   .nav > .nav-btn > label .top-bar.open {
-    top: 14px;
-    left: -3px;
+    top: 12px;
+    left: 0px;
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
@@ -138,7 +138,7 @@
     top: 20px;
   }
   .nav > .nav-btn > label .bottom-bar.open {
-    top: 13px;
+    top: 12px;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
   }
@@ -152,17 +152,11 @@
             transform: rotate(0deg);
     -webkit-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-    border-top: 2px solid #eee;
+    border-top: 3px solid var(--color-tags);
   }
   .nav > .nav-btn > label:hover,
   .nav #nav-check:checked ~ .nav-btn > label {
     cursor: pointer;
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 5px;
-    border-top: 2px solid #eee;
   }
   .nav > .nav-links > a {
     display: block;

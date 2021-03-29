@@ -104,8 +104,8 @@
             top: 5px;
            
             &.open{
-                top: 14px;
-                left: -3px;
+                top: 12px;
+                left: 0px;
                 transform: rotate(135deg);
             }
         }
@@ -122,7 +122,7 @@
             top: 20px;
 
             &.open{
-                top: 13px;
+                top: 12px;
                 transform: rotate(-135deg);
             }
         }
@@ -136,19 +136,12 @@
         opacity: 1;
         transform: rotate(0deg);
         transition: .25s ease-in-out;
-        border-top: 2px solid #eee;
+        border-top: 3px solid var(--color-tags);
     }
 
     .nav>.nav-btn>label:hover,
     .nav #nav-check:checked~.nav-btn>label {
         cursor: pointer;
-    }
-
-    .nav>.nav-btn>label>span {
-        display: block;
-        width: 25px;
-        height: 5px;
-        border-top: 2px solid #eee;
     }
 
     .nav>.nav-links>a {
