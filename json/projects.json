@@ -1,0 +1,140 @@
+{
+  "projects": {
+    "MedCare": {
+      "description": "First project in high school to help doctors in the hospitals to manage the patient",
+      "language": "C",
+      "type": "console",
+      "tech": "",
+      "year": "2017/2018",
+      "state": true,
+      "db": false,
+      "lang": "Portuguese",
+      "github": "https://github.com/joaogarrido98/MedCare.git",
+      "url": "",
+      "images": {
+        "1": "medcare/img1.jpg",
+        "2": "medcare/img2.jpg",
+        "3": "medcare/img3.jpg"
+      }
+    },
+    "EasyPolice": {
+      "description": "Second year School Project, EasyPolice\n This program lets the user (police) register crimes and occurrences. Register people and check their criminal record.",
+      "language": "C#",
+      "type": "Windows Forms",
+      "tech": "Sql Server",
+      "year": "2018/2020",
+      "state": true,
+      "db": true,
+      "lang": "Portuguese",
+      "github": "https://github.com/joaogarrido98/EasyPolice.git",
+      "url": "",
+      "images": {
+        "1": "easypolice/img1.jpg",
+        "2": "easypolice/img2.jpg",
+        "3": "easypolice/img3.jpg"
+      }
+    },
+    "GreenHelp": {
+      "description": "GreenHelp is a Website that allows users to see what the GreenHelp App is about.\n This was my project for the final year of High School.",
+      "language": ["HTML5", "CSS", "JavaScript", "PHP"],
+      "type": "Website",
+      "tech": ["Bootstrap", "jQuery"],
+      "year": "2019/2020",
+      "state": true,
+      "db": false,
+      "lang": ["Portuguese", "English"],
+      "github": "https://github.com/joaogarrido98/GreenHelp.git",
+      "url": "http://greenhelp.000webhostapp.com/",
+      "images": {
+        "1": "greenhelp/img1.jpg",
+        "2": "greenhelp/img2.jpg",
+        "3": "greengelp/img3.jpg"
+      }
+    },
+    "GreenHelp Admins": {
+      "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
+      "language": ["HTML5", "CSS", "JavaScript", "PHP"],
+      "type": "Web Application",
+      "tech": ["Bootstrap", "jQuery", "phpmyadmin", "mySql", "Firebase"],
+      "year": "2019/2020",
+      "state": true,
+      "db": true,
+      "lang": "English",
+      "github": "",
+      "url": "",
+      "images": {
+        "1": "greenhelp_admins/img1.jpg",
+        "2": "greenhelp_admins/img2.jpg",
+        "3": "greengelp_admins/img3.jpg"
+      }
+    },
+    "GreenHelp App": {
+      "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
+      "language": ["Kotlin", "XML"],
+      "type": "Android App",
+      "tech": ["Firebase"],
+      "year": "2019/2020",
+      "state": true,
+      "db": true,
+      "lang": "English",
+      "github": "",
+      "url": "",
+      "images": {
+        "1": "greenhelp_app/img1.jpg",
+        "2": "greenhelp_app/img2.jpg",
+        "3": "greengelp_app/img3.jpg"
+      }
+    },
+    "EuroToPound": {
+      "description": "Coroutines way of getting api with spinners.\n This is a simple app for learning purposes about kotlin and coroutines.",
+      "language": ["Kotlin", "XML"],
+      "type": "Android App",
+      "tech": "",
+      "year": "2020",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/EuroToPound.git",
+      "url": "",
+      "images": {
+        "1": "euro/img1.jpg",
+        "2": "euro/img2.jpg",
+        "3": "euro/img3.jpg"
+      }
+    },
+    "Deck-Shuffle": {
+      "description": "Simple website to test some functions in javascript",
+      "language": ["HTML5", "CSS", "JavaScript"],
+      "type": "Website",
+      "tech": "",
+      "year": "2020",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/deck-shuffle.git",
+      "url": "https://joaogarrido98.github.io/deck-shuffle",
+      "images": {
+        "1": "deck/img1.jpg",
+        "2": "deck/img2.jpg",
+        "3": "deck/img3.jpg"
+      }
+    },
+    "MovieDatabaseApi": {
+      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
+      "language": ["HTML5", "CSS", "JavaScript"],
+      "type": "Website",
+      "tech": "MovieDatabase Api",
+      "year": "2020/2021",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/MovieDatabaseAPI.git",
+      "url": "https://joaogarrido98.github.io/MovieDatabaseAPI/",
+      "images": {
+        "1": "deck/img1.jpg",
+        "2": "deck/img2.jpg",
+        "3": "deck/img3.jpg"
+      }
+    }
+  }
+}

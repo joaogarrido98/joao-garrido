@@ -158,10 +158,11 @@
 
   .floating:hover,
   .floating:focus-within {
-    background-color: var(--field__background--hover);
+    background-color: black;
   }
 
   .floating__input {
+    outline: none;
     user-select: none;
     padding: 1.8rem 0 0.6rem 1rem;
     transition: border-color 0.2s ease;

@@ -131,5 +131,5 @@ function scrollChange() {
             nav.style.backgroundColor = 'transparent';
             nav.style.boxShadow = 'none'
         }
-    })
+    });
 }

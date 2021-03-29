@@ -1,7 +1,0 @@
-create a json with the info of the projects
-
-like 
--github
--name
--url
--etc etc
