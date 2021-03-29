@@ -27,7 +27,6 @@ a {
 }
 
 .sectionPic {
-  /*font-family: 'Rubik', sans-serif;*/
   font-size: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,7 +254,6 @@ a {
   border-radius: 90px 30px 30px 90px;
   position: relative;
   margin: 0 10px 10px 0;
-  font-family: helvetica;
 }
 
 .skills .tag:after {

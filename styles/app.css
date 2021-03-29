@@ -44,7 +44,6 @@ html,
 body {
   scroll-behavior: smooth;
   min-height: 100%;
-  /*font-family: 'Rubik', sans-serif;*/
 }
 
 body {
@@ -73,11 +72,6 @@ body {
   color: white;
 
 }
-/*.sectionPic{
-  background: url('../resources/profilebg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}*/
 
 .knowMore {
   z-index: 10;
