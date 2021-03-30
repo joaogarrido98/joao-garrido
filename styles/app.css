@@ -3,8 +3,10 @@
   --te: cubic-bezier(0.215, 0.61, 0.355, 1);
   --td: 150ms;
 
-  --color-primary: #232526;
-  --color-secondary: #414345;
+  --color-primary: #111517;
+  --color-secondary: #1a1b20;
+  --color-tertiary:#272830 ;
+  --color-light:#7c4ce4;
   --color-dark: #1a1a1a;
   --color-tags: #682ae9;
   --color-tags-darker: #572ab8;
@@ -47,11 +49,12 @@ body {
 
 body {
   overflow-y: auto;
-  background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary)) fixed no-repeat;
+ /* background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary)) fixed no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center;*/
+  background-color: #111517;
   margin: 0;
   color: var(--color-dark);
   font-family: var(--font-family-primary);

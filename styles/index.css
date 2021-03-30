@@ -338,15 +338,6 @@ a {
           animation: 1s ease-out 0s 1 fadeInLeft forwards;
 }
 
-@media (max-width: 1320px) {
-  .contactUs {
-    width: 95% !important;
-  }
-  .contactUs p {
-    max-width: 80% !important;
-  }
-}
-
 @media (max-width: 900px) {
   .timeline {
     max-width: 90%;

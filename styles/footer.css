@@ -117,10 +117,10 @@
 }
 
 .footer .social a {
-  -webkit-box-shadow: 3px 3px var(--color-secondary);
-          box-shadow: 3px 3px var(--color-secondary);
+  -webkit-box-shadow: 3px 3px #616161;
+          box-shadow: 3px 3px #616161;
   color: white;
-  background: var(--color-primary);
+  background: var(--color-tertiary);
   border-radius: 8px;
   text-decoration: none;
   font-family: fontawesome;
@@ -170,5 +170,11 @@
 .footer .social a:hover {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
+}
+
+@media (max-width: 1320px) {
+  p {
+    max-width: 80% !important;
+  }
 }
 /*# sourceMappingURL=footer.css.map */

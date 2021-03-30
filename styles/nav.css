@@ -12,7 +12,6 @@
           justify-content: space-between;
   -webkit-transition: all ease 0.4s;
   transition: all ease 0.4s;
-  padding: 0px 10px 0px 10px;
   font-family: 'Varta', sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -42,7 +41,7 @@
 }
 
 .nav > .nav-links {
-  margin-right: 30px;
+  margin-right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,8 +57,8 @@
   padding: 13px 10px 13px 10px;
   text-decoration: none;
   color: #c0c0c0;
-  -webkit-transition: all ease 0.6s;
-  transition: all ease 0.6s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .nav > .nav-links > a:hover {
@@ -74,9 +73,41 @@
   color: var(--color-tags);
 }
 
+.nav-links a:before {
+  content: "{";
+  left: 5px;
+}
+
+.nav-links a:after {
+  content: "}";
+  right: 5px;
+}
+
+.nav-links a:before,
+.nav-links a:after {
+  position: relative;
+  opacity: 0;
+  color: var(--color-tags);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.nav-links a:hover:before,
+.nav-links a:hover:after {
+  opacity: 1;
+}
+
+.nav-links a:hover:before {
+  left: -5px;
+}
+
+.nav-links a:hover:after {
+  right: -5px;
+}
+
 @media (max-width: 768px) {
   .nav > .nav-header .nav-title {
-    padding: 0px 10px 10px 30px;
+    padding: 0px 10px 10px 25px;
   }
   .nav {
     background-color: var(--color-nav) !important;
@@ -88,7 +119,7 @@
   }
   .nav > .nav-btn {
     display: block;
-    margin-right: 30px;
+    margin-right: 25px;
     width: auto;
     position: relative;
     -webkit-transform: rotate(0deg);
