@@ -10,20 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     submitAnimation();
 
     getActiveMenu();
+
+    handleInputEmail();
+
+    handleInputName();
 });
 
-/*
-function checkEmail(value) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
-        return (true)
-    }
-    let emailInput = document.getElementById("formEmail")
-    let alert = emailInput.nextElementSibling;
-    alert.style.opacity = '1';
-    alert.innerHTML = "Incorrect Email format";
-    return (false)
-}
-*/
 function getYearCopy() {
     let date = new Date();
     let year = date.getFullYear();
@@ -99,4 +91,42 @@ function getActiveMenu() {
             this.className += " active";
         });
     }
+}
+
+function handleInputEmail() {
+    let emailInput = document.querySelector("#email");
+    emailInput.addEventListener('input', (evt) => {
+        const value = evt.target.value;
+        const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+        if(value !== ""){
+            if (emailRegex.test(value.trim())) {
+                evt.target.classList.add('valid');
+                evt.target.classList.remove('invalid');
+                return true;
+            } else {
+                evt.target.classList.add('invalid');
+                evt.target.classList.remove('valid');
+                return false;
+            }
+        }else{
+            return false;
+        }
+        
+    });
+}
+
+function handleInputName(){
+    let nameInput = document.querySelector("#name");
+    nameInput.addEventListener('input', (evt) => {
+        const value = evt.target.value;
+        if(value === ""){
+            evt.target.classList.remove('valid');
+            evt.target.classList.add('invalid');
+            return false;
+        }else{
+            evt.target.classList.add('valid');
+            evt.target.classList.remove('invalid');
+            return true;
+        }
+    });
 }
