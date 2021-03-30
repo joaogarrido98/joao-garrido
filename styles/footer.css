@@ -117,8 +117,8 @@
 }
 
 .footer .social a {
-  -webkit-box-shadow: 3px 3px #616161;
-          box-shadow: 3px 3px #616161;
+  -webkit-box-shadow: 3px 3px var(--color-grey);
+          box-shadow: 3px 3px var(--color-grey);
   color: white;
   background: var(--color-tertiary);
   border-radius: 8px;

@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     submitEmail();
 
     submitAnimation();
+
+    getActiveMenu();
 });
 
 /*
@@ -82,4 +84,19 @@ function submitAnimation() {
         actionBtn.disabled = true;
         setTimeout(() => actionBtn.classList.remove("loading"), 3000);
     });
+}
+
+
+function getActiveMenu() {
+    let nav = document.querySelector(".nav-links");
+    let links = nav.getElementsByClassName("pages");
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function () {
+            let current = document.getElementsByClassName("active");
+            if (current.length > 0) {
+                current[0].className = current[0].className.replace(" active", "");
+            }
+            this.className += " active";
+        });
+    }
 }

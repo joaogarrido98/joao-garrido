@@ -19,6 +19,10 @@
   display: flex;
 }
 
+.nav #home {
+  color: var(--color-tags);
+}
+
 .nav-header {
   position: static;
   margin-top: 10px;
@@ -53,6 +57,10 @@
   letter-spacing: 2px;
 }
 
+.nav > .nav-links .active {
+  color: var(--color-tags);
+}
+
 .nav > .nav-links > a {
   padding: 13px 10px 13px 10px;
   text-decoration: none;
@@ -67,10 +75,6 @@
 
 .nav > #nav-check {
   display: none;
-}
-
-#active {
-  color: var(--color-tags);
 }
 
 .nav-links a:before {

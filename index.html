@@ -42,14 +42,14 @@
         </label>
       </div>
       <div class="nav-links">
-        <a href="#main" class="pages">Home</a>
         <a href="#life_events" class="pages">About</a>
         <a href="#projects" class="pages">Projects</a>
         <a href="#contact" class="pages">Contact</a>
+        <a href="#main" class="pages active" id="home"><span class="fa fa-home"></a>
       </div>
     </div>
   </header>
-  <main id="main" class="main-content">
+  <section id="main" class="main-content">
     <div class="content">
       <div class="sectionPic">
         <div class="introduction">
@@ -62,7 +62,7 @@
       <div style="text-align: center;" class="life_events" id="life_events">
         <h1 style="display: inline;">Life Events</h1><span> *That matter</span>
       </div>
-      <section class="timeline">
+      <div class="timeline">
         <div class="container timeline-container">
           <div class="timeline-item">
             <div class="timeline-img"></div>
@@ -127,12 +127,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
     <div style="text-align: center;" class="skills">
       <h1>But what do I know you ask?</h1>
     </div>
-    <section class="skills">
+    <div class="skills">
       <div class="hardskills">
         <h2>Hard-skills</h2>
         <article class="row">
@@ -179,12 +179,15 @@
         <ul class="tags">
         </ul>
       </div>
-    </section>
     </div>
-  </main>
-  <footer class="footer">
+    </div>
+  </section>
+  <section id="projects" class="projects">
+
+  </section>
+  <section id="contact" class="footer">
     <div class="contactUs" id="contactForm">
-      <div id="contact" class="columns">
+      <div class="columns">
         <h1>Let's create magic</h1>
       </div>
       <div class="columns">
@@ -244,7 +247,7 @@
           class="fa-lg fa-stack-overflow"></i></a>
     </div>
     <p class="copyright">Created by me - João Garrido <span id="year"></span></p>
-  </footer>
+  </section>
   <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
   <script src="js/index.js"></script>
   <script src="js/app.js"></script>

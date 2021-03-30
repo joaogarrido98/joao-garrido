@@ -10,6 +10,10 @@
     font-family: 'Varta', sans-serif;
     align-items: center;
     display: flex;
+
+    #home{
+        color: var(--color-tags);
+    }
 }
 
 .nav-header {
@@ -39,6 +43,12 @@
     flex-direction: row;
     font-size: 18px;
     letter-spacing: 2px;
+
+    .active {
+        color: var(--color-tags);
+    }
+    
+    
 }
 
 .nav>.nav-links>a {
@@ -54,10 +64,6 @@
 
 .nav>#nav-check {
     display: none;
-}
-
-#active {
-    color: var(--color-tags);
 }
 
 .nav-links {
@@ -91,8 +97,6 @@
     a:hover:after {
         right: -5px;
     }
-
-
 }
 
 @media (max-width: 768px) {
