@@ -104,13 +104,15 @@
     margin-top: 1.5em;
   }
 
-  input.valid, input.valid:focus-within{
-    border-color: #3aba6f!important;
+  input.valid,
+  input.valid:focus-within {
+    border-color: #3aba6f !important;
   }
 
 
-  input.invalid, input.invalid:focus-within {
-    border-color: #f05a5c!important;
+  input.invalid,
+  input.invalid:focus-within {
+    border-color: #f05a5c !important;
   }
 
   input.valid~.icons .check {
@@ -171,7 +173,7 @@
     padding: 1.8rem 0 0.6rem 1rem;
     transition: all 0.2s ease;
     caret-color: var(--color-tags);
-    border-bottom: 2px solid var(--input__border)!important;
+    border-bottom: 2px solid var(--input__border) !important;
 
     &:hover,
     &:focus-within {
@@ -181,7 +183,7 @@
     }
 
     &:focus-within {
-      border: 2px solid var(--color-tags)!important;
+      border: 2px solid var(--color-tags) !important;
     }
 
     &::placeholder {
@@ -226,6 +228,20 @@
   .floating__input:focus+.floating__label::before {
     color: var(--color-tags);
     font-weight: 600;
+  }
+
+  &:nth-child(5) {
+    opacity: 0;
+  }
+
+  .status {
+    visibility: collapse;
+    padding: 10px 10px;
+    opacity: 1;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
   }
 }
 

@@ -3,17 +3,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createTags();
 
-    formVisibility();
-
-    submitEmail();
-
-    submitAnimation();
-
     getActiveMenu();
 
-    handleInputEmail();
+    const letsBuild = document.getElementById("letsBuild");
+    letsBuild.addEventListener('click', (e) => {
+        e.preventDefault();
+        formVisibility();
+    });
 
-    handleInputName();
+    const emailInput = document.querySelector("#email");
+    emailInput.addEventListener('input', (evt) => {
+        validateEmail(evt.target.value, emailInput);
+    });
+
+    let nameInput = document.querySelector("#name");
+    nameInput.addEventListener('input', (evt) => {
+        validateName(evt.target.value, nameInput);
+    });
+
+    let phoneInput = document.querySelector("#phone");
+    phoneInput.addEventListener('input', (evt) => {
+        validatePhone(evt.target.value, phoneInput);
+    });
+
+    let form = document.querySelector("#my-form");
+    form.addEventListener("submit", submitEmail);
 });
 
 function getYearCopy() {
@@ -36,46 +50,47 @@ function createTags() {
 }
 
 function formVisibility() {
-    let letsBuild = document.getElementById("letsBuild");
     let hidden = document.querySelector(".collapse");
-    letsBuild.addEventListener('click', (e) => {
-        e.preventDefault();
-        hidden.classList.toggle("active");
-    });
+    hidden.classList.toggle("active");
 }
 
-function submitEmail() {
-    let form = document.getElementById("my-form");
-
-    async function handleSubmit(event) {
-        event.preventDefault();
-        /*
-      let status = document.getElementById("my-form-status");
-      let data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-      */
+function submitEmail(event) {
+    event.preventDefault();
+    let actionBtn = document.querySelector(".action-btn");
+    actionBtn.classList.toggle("loading");
+    actionBtn.disabled = true;
+    const name = document.querySelector("#name");
+    let nameValid = validateName(name.value, name);
+    const email = document.querySelector("#email");
+    let emailValid = validateEmail(email.value, email);
+    const phone = document.querySelector("#phone");
+    let phoneValid = validatePhone(phone.value, phone);
+    const message = document.querySelector("#message");
+    let messageValid = validateMessage(message.value, message);
+    let data = new FormData(event.target);
+    let status = document.querySelector(".status");
+    if (emailValid && nameValid && phoneValid && messageValid) {
+        fetch(event.target.action, {
+            method: event.target.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            status.innerHTML = "Message sent! We will be in contact soon!"
+            status.style.backgroundColor = "#3aba6f"
+            actionBtn.classList.toggle("loading");
+        }).catch(error => {
+            status.innerHTML = "Something went wrong. Try again later!";
+            status.style.backgroundColor = "#f05a5c"
+            actionBtn.classList.toggle("loading");
+        });
+    } else {
+        status.innerHTML = "Please, Fill in the form correctly.";
+        status.style.backgroundColor = "#f05a5c"
+        actionBtn.classList.toggle("loading");
     }
-    form.addEventListener("submit", handleSubmit)
-}
-
-function submitAnimation() {
-    const actionBtn = document.querySelector(".action-btn");
-    actionBtn.addEventListener('click', () => {
-        actionBtn.classList.add("loading");
-        actionBtn.disabled = true;
-        setTimeout(() => actionBtn.classList.remove("loading"), 3000);
-    });
+    actionBtn.disabled = false;
 }
 
 
@@ -93,40 +108,56 @@ function getActiveMenu() {
     }
 }
 
-function handleInputEmail() {
-    let emailInput = document.querySelector("#email");
-    emailInput.addEventListener('input', (evt) => {
-        const value = evt.target.value;
-        const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-        if(value !== ""){
-            if (emailRegex.test(value.trim())) {
-                evt.target.classList.add('valid');
-                evt.target.classList.remove('invalid');
-                return true;
-            } else {
-                evt.target.classList.add('invalid');
-                evt.target.classList.remove('valid');
-                return false;
-            }
-        }else{
+function validateEmail(value, emailInput) {
+    const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+    if (value !== "") {
+        if (emailRegex.test(value.trim())) {
+            emailInput.classList.add('valid');
+            emailInput.classList.remove('invalid');
+            return true;
+        } else {
+            emailInput.classList.add('invalid');
+            emailInput.classList.remove('valid');
             return false;
         }
-        
-    });
+    } else {
+        return false;
+    }
 }
 
-function handleInputName(){
-    let nameInput = document.querySelector("#name");
-    nameInput.addEventListener('input', (evt) => {
-        const value = evt.target.value;
-        if(value === ""){
-            evt.target.classList.remove('valid');
-            evt.target.classList.add('invalid');
-            return false;
-        }else{
-            evt.target.classList.add('valid');
-            evt.target.classList.remove('invalid');
+function validateName(value, nameInput) {
+    if (value === "") {
+        nameInput.classList.remove('valid');
+        nameInput.classList.add('invalid');
+        return false;
+    } else {
+        nameInput.classList.add('valid');
+        nameInput.classList.remove('invalid');
+        return true;
+    }
+}
+
+function validatePhone(value, phoneInput) {
+    let reg = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g
+    if (value !== "") {
+        if (reg.test(value.trim())) {
+            phoneInput.classList.add('valid');
+            phoneInput.classList.remove('invalid');
             return true;
+        } else {
+            phoneInput.classList.remove('valid');
+            phoneInput.classList.add('invalid');
+            return false;
         }
-    });
+    } else {
+        return true;
+    }
+}
+
+function validateMessage(value, messageInput) {
+    if (value !== "") {
+        return true;
+    } else {
+        return false;
+    }
 }
