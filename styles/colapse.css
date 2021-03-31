@@ -275,12 +275,8 @@
   font-weight: 600;
 }
 
-.floating:nth-child(5) {
-  opacity: 0;
-}
-
 .floating .status {
-  visibility: collapse;
+  display: none;
   padding: 10px 10px;
   opacity: 1;
   font-weight: 700;

@@ -230,12 +230,8 @@
     font-weight: 600;
   }
 
-  &:nth-child(5) {
-    opacity: 0;
-  }
-
   .status {
-    visibility: collapse;
+    display: none;
     padding: 10px 10px;
     opacity: 1;
     font-weight: 700;

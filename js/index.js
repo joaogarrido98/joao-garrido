@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     getActiveMenu();
 
     const letsBuild = document.getElementById("letsBuild");
-    letsBuild.addEventListener('click', (e) => {
-        e.preventDefault();
+    letsBuild.addEventListener('click', (evt) => {
+        evt.preventDefault();
         formVisibility();
     });
 
@@ -16,17 +16,22 @@ document.addEventListener('DOMContentLoaded', () => {
         validateEmail(evt.target.value, emailInput);
     });
 
-    let nameInput = document.querySelector("#name");
+    const nameInput = document.querySelector("#name");
     nameInput.addEventListener('input', (evt) => {
         validateName(evt.target.value, nameInput);
     });
 
-    let phoneInput = document.querySelector("#phone");
+    const phoneInput = document.querySelector("#phone");
     phoneInput.addEventListener('input', (evt) => {
         validatePhone(evt.target.value, phoneInput);
     });
 
-    let form = document.querySelector("#my-form");
+    const messageInput = document.querySelector("#message");
+    messageInput.addEventListener('input', (evt) => {
+        validateMessage(evt.target.value, messageInput);
+    });
+
+    const form = document.querySelector("#my-form");
     form.addEventListener("submit", submitEmail);
 });
 
@@ -56,19 +61,31 @@ function formVisibility() {
 
 function submitEmail(event) {
     event.preventDefault();
+    const email = document.querySelector("#email");
+    const name = document.querySelector("#name");
+    const phone = document.querySelector("#phone");
+    const message = document.querySelector("#message");
+    let emailValid = validateEmail(email.value, email);
+    let nameValid = validateName(name.value, name);
+    let phoneValid = validatePhone(phone.value, phone);
+    let messageValid = validateMessage(message.value, message);
     let actionBtn = document.querySelector(".action-btn");
     actionBtn.classList.toggle("loading");
     actionBtn.disabled = true;
-    const name = document.querySelector("#name");
-    let nameValid = validateName(name.value, name);
-    const email = document.querySelector("#email");
-    let emailValid = validateEmail(email.value, email);
-    const phone = document.querySelector("#phone");
-    let phoneValid = validatePhone(phone.value, phone);
-    const message = document.querySelector("#message");
-    let messageValid = validateMessage(message.value, message);
-    let data = new FormData(event.target);
     let status = document.querySelector(".status");
+    let data = new FormData(event.target);
+    if (!emailValid) {
+        email.classList.add("invalid");
+    }
+    if (!nameValid) {
+        name.classList.add("invalid");
+    }
+    if (!phoneValid) {
+        phone.classList.add("invalid");
+    }
+    if (!messageValid) {
+        message.classList.add("invalid");
+    }
     if (emailValid && nameValid && phoneValid && messageValid) {
         fetch(event.target.action, {
             method: event.target.method,
@@ -77,15 +94,19 @@ function submitEmail(event) {
                 'Accept': 'application/json'
             }
         }).then(response => {
+            status.style.display = "block";
             status.innerHTML = "Message sent! We will be in contact soon!"
             status.style.backgroundColor = "#3aba6f"
             actionBtn.classList.toggle("loading");
+
         }).catch(error => {
+            status.style.display = "block";
             status.innerHTML = "Something went wrong. Try again later!";
             status.style.backgroundColor = "#f05a5c"
             actionBtn.classList.toggle("loading");
         });
     } else {
+        status.style.display = "block";
         status.innerHTML = "Please, Fill in the form correctly.";
         status.style.backgroundColor = "#f05a5c"
         actionBtn.classList.toggle("loading");
@@ -150,14 +171,18 @@ function validatePhone(value, phoneInput) {
             return false;
         }
     } else {
-        return true;
+        return false;
     }
 }
 
 function validateMessage(value, messageInput) {
-    if (value !== "") {
-        return true;
-    } else {
+    if (value === "") {
+        messageInput.classList.remove("valid");
+        messageInput.classList.add("invalid");
         return false;
+    } else {
+        messageInput.classList.add("valid");
+        messageInput.classList.remove("invalid");
+        return true;
     }
 }
