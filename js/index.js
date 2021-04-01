@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getActiveMenu();
 
+    left();
+
     const letsBuild = document.getElementById("letsBuild");
     letsBuild.addEventListener('click', (evt) => {
         evt.preventDefault();
@@ -33,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector("#my-form");
     form.addEventListener("submit", submitEmail);
+
+    window.addEventListener('scroll', checkPosition);
 });
 
 function getYearCopy() {
@@ -61,6 +65,8 @@ function formVisibility() {
 
 function submitEmail(event) {
     event.preventDefault();
+    let status = document.querySelector(".status");
+    status.style.display = "none";
     const email = document.querySelector("#email");
     const name = document.querySelector("#name");
     const phone = document.querySelector("#phone");
@@ -72,7 +78,6 @@ function submitEmail(event) {
     let actionBtn = document.querySelector(".action-btn");
     actionBtn.classList.toggle("loading");
     actionBtn.disabled = true;
-    let status = document.querySelector(".status");
     let data = new FormData(event.target);
     if (!emailValid) {
         email.classList.add("invalid");
@@ -94,6 +99,7 @@ function submitEmail(event) {
                 'Accept': 'application/json'
             }
         }).then(response => {
+            event.target.reset();
             status.style.display = "block";
             status.innerHTML = "Message sent! We will be in contact soon!"
             status.style.backgroundColor = "#3aba6f"
@@ -184,5 +190,42 @@ function validateMessage(value, messageInput) {
         messageInput.classList.add("valid");
         messageInput.classList.remove("invalid");
         return true;
+    }
+}
+
+function left() {
+    document.addEventListener("scroll", function () {
+        const animatedBoxes = document.getElementsByClassName("animated");
+        const windowOffsetTop = window.innerHeight + window.scrollY;
+
+        Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
+            const animatedBoxOffsetTop = animatedBox.offsetTop;
+
+            if (windowOffsetTop >= animatedBoxOffsetTop) {
+                addClass(animatedBox, "fadeInLeft");
+            }
+        });
+    });
+}
+
+function addClass(element, className) {
+    const arrayClasses = element.className.split(" ");
+    if (arrayClasses.indexOf(className) === -1) {
+        element.className += " " + className;
+    }
+}
+
+function checkPosition() {
+    let elements;
+    let windowHeight;
+    elements = document.querySelectorAll('.anim');
+    windowHeight = window.innerHeight;
+    for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let positionFromTop = elements[i].getBoundingClientRect().top;
+
+        if (positionFromTop - windowHeight <= 0) {
+            element.classList.add('slideUp');
+        }
     }
 }

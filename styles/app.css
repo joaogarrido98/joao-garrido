@@ -6,9 +6,9 @@
   --color-primary: #111517;
   --color-secondary: #1a1b20;
   --color-tertiary:#272830 ;
-  --color-light:#7c4ce4;
+  --color-light:#7444da;
   --color-dark: #1a1a1a;
-  --color-tags: #682ae9;
+  --color-tags: #6127df;
   --color-tags-darker: #572ab8;
   --color-nav: #19171b;
   --color-grey: #626262;
@@ -24,6 +24,7 @@
   --linkedin-blue: #0072b1;
   --github-purple: #6e5494;
   --stackoverflow-orange: #f48024;
+  --spotify-green: #1DB954;
 }
 
 ::-webkit-scrollbar {

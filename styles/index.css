@@ -339,6 +339,16 @@ a {
           animation: 1s ease-out 0s 1 fadeInLeft forwards;
 }
 
+.anim {
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+.slideUp {
+  -webkit-animation: slideUp 1s ease-out 0s 1 forwards;
+          animation: slideUp 1s ease-out 0s 1 forwards;
+}
+
 @media (max-width: 900px) {
   .timeline {
     max-width: 90%;
@@ -446,88 +456,6 @@ a {
   }
 }
 
-@-webkit-keyframes toBottomFromTop {
-  49% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  51% {
-    opacity: 1;
-  }
-}
-
-@keyframes toBottomFromTop {
-  49% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-  }
-  51% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes short-press {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes short-press {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -551,6 +479,20 @@ a {
     opacity: 1;
     -webkit-transform: none;
             transform: none;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -117,6 +117,10 @@
         background-color: var(--stackoverflow-orange);
       }
 
+      &:nth-of-type(5):hover {
+        background-color: var(--spotify-green);
+      }
+
       &:hover>i {
         animation: toBottomFromTop 0.5s var(--te) both;
       }

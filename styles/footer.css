@@ -157,6 +157,10 @@
   background-color: var(--stackoverflow-orange);
 }
 
+.footer .social a:nth-of-type(5):hover {
+  background-color: var(--spotify-green);
+}
+
 .footer .social a:hover > i {
   -webkit-animation: toBottomFromTop 0.5s var(--te) both;
           animation: toBottomFromTop 0.5s var(--te) both;

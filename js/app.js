@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    progressAnimation();
-
     scrollChange();
 
     showMenu();
@@ -20,28 +18,6 @@ function progressTop() {
     });
 }
 
-
-function progressAnimation() {
-    document.addEventListener("scroll", function (event) {
-        const animatedBoxes = document.getElementsByClassName("animated");
-        const windowOffsetTop = window.innerHeight + window.scrollY;
-
-        Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
-            const animatedBoxOffsetTop = animatedBox.offsetTop;
-
-            if (windowOffsetTop >= animatedBoxOffsetTop) {
-                addClass(animatedBox, "fadeInLeft");
-            }
-        });
-    });
-}
-
-function addClass(element, className) {
-    const arrayClasses = element.className.split(" ");
-    if (arrayClasses.indexOf(className) === -1) {
-        element.className += " " + className;
-    }
-}
 
 function scrollChange() {
     const nav = document.querySelector('.nav')
