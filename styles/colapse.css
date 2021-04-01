@@ -115,24 +115,60 @@
   margin-top: 1.5em;
 }
 
+.floating textarea {
+  min-width: 100%;
+  max-width: 100%;
+  resize: none;
+}
+
+.floating textarea.floating__input::-webkit-input-placeholder {
+  color: #444 !important;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.floating textarea.floating__input:-ms-input-placeholder {
+  color: #444 !important;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.floating textarea.floating__input::-ms-input-placeholder {
+  color: #444 !important;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.floating textarea.floating__input::placeholder {
+  color: #444 !important;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
 .floating input.valid,
-.floating input.valid:focus-within {
+.floating input.valid:focus-within,
+.floating textarea.valid,
+.floating textarea.valid:focus-within {
   border-color: #3aba6f !important;
 }
 
 .floating input.invalid,
-.floating input.invalid:focus-within {
+.floating input.invalid:focus-within,
+.floating textarea.invalid,
+.floating textarea.invalid:focus-within {
   border-color: #f05a5c !important;
 }
 
-.floating input.valid ~ .icons .check {
+.floating input.valid ~ .icons .check,
+.floating textarea.valid ~ .icons .check {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-.floating input.invalid ~ .icons .x {
+.floating input.invalid ~ .icons .x,
+.floating textarea.invalid ~ .icons .x {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
