@@ -348,8 +348,8 @@ a {
 }
 
 .anim {
-  -webkit-transform: translateY(150px);
-          transform: translateY(150px);
+  -webkit-transform: translateX(150px);
+          transform: translateX(150px);
 }
 
 .slideUp {

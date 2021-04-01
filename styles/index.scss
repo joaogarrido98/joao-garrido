@@ -347,9 +347,10 @@ a {
   animation: 1s ease-out 0s 1 fadeInLeft forwards;
 }
 
-.anim {
-  transform: translateY(150px);
+.anim{
+  transform: translateX(150px);
 }
+
 
 .slideUp {
   animation: slideUp 1s ease-out 0s 1 forwards;

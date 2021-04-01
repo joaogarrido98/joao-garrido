@@ -11,7 +11,7 @@
     align-items: center;
     display: flex;
 
-    #home{
+    #home {
         color: var(--color-tags);
     }
 }
@@ -47,8 +47,8 @@
     .active {
         color: var(--color-tags);
     }
-    
-    
+
+
 }
 
 .nav>.nav-links>a {
@@ -138,6 +138,11 @@
         padding: 13px;
         transform: rotate(0deg);
         transition: .5s ease-in-out;
+
+        &:hover .middle-bar {
+            width: 15px;
+            margin-left: 5px;
+        }
 
         .top-bar {
             top: 5px;

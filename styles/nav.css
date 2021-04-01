@@ -153,6 +153,10 @@
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
   }
+  .nav > .nav-btn > label:hover .middle-bar {
+    width: 15px;
+    margin-left: 5px;
+  }
   .nav > .nav-btn > label .top-bar {
     top: 5px;
   }
