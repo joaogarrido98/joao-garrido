@@ -29,6 +29,14 @@ a {
           align-items: flex-start;
 }
 
+.sectionPic .introduction h1 {
+  text-shadow: 0 0 5px var(--color-neon2), 0 0 15px var(--color-neon2), 0 0 20px var(--color-neon2), 0 0 40px var(--color-neon2), 0 0 60px var(--color-neon3), 0 0 10px var(--color-neon4), 0 0 98px var(--color-neon3);
+  color: var(--color-neon);
+  text-align: center;
+  -webkit-animation: blink 6s infinite;
+          animation: blink 6s infinite;
+}
+
 .sectionPic .introduction h3 {
   color: var(--text-white-dark);
 }
@@ -493,6 +501,46 @@ a {
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px var(--color-neon2), 0 0 15px var(--color-neon2), 0 0 20px var(--color-neon2), 0 0 40px var(--color-neon2), 0 0 60px var(--color-neon3), 0 0 10px var(--color-neon4), 0 0 98px var(--color-neon3);
+    color: var(--color-neon);
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px var(--color-neon2), 0 0 15px var(--color-neon2), 0 0 20px var(--color-neon2), 0 0 40px var(--color-neon2), 0 0 60px var(--color-neon3), 0 0 10px var(--color-neon4), 0 0 98px var(--color-neon3);
+    color: var(--color-neon);
   }
 }
 /*# sourceMappingURL=index.css.map */

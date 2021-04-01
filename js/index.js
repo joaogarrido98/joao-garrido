@@ -103,20 +103,13 @@ function submitEmail(event) {
             status.style.display = "block";
             status.innerHTML = "Message sent! We will be in contact soon!"
             status.style.backgroundColor = "#3aba6f"
-            actionBtn.classList.toggle("loading");
-
         }).catch(error => {
             status.style.display = "block";
             status.innerHTML = "Something went wrong. Try again later!";
             status.style.backgroundColor = "#f05a5c"
-            actionBtn.classList.toggle("loading");
         });
-    } else {
-        status.style.display = "block";
-        status.innerHTML = "Please, Fill in the form correctly.";
-        status.style.backgroundColor = "#f05a5c"
-        actionBtn.classList.toggle("loading");
     }
+    actionBtn.classList.toggle("loading");
     actionBtn.disabled = false;
 }
 
