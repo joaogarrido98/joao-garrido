@@ -120,9 +120,9 @@ a {
   position: relative;
   width: 45%;
   padding: 10px 30px;
-  border-radius: 12px;
+  border-radius: 10px;
   background: var(--color-dark);
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 1);
 
   &::after {
     content: '';
@@ -236,6 +236,7 @@ a {
   }
 
   .tag {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 1);
     background: var(--color-tags);
     color: white;
     display: inline-block;
@@ -291,9 +292,9 @@ a {
     }
 
     .row ul li div {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
       margin-bottom: 35px;
-      border-radius: 3px 3px 3px 3px;
-      -webkit-border-radius: 3px 3px 3px 3px;
+      border-radius: 4px;
       background: #2e2e2e;
       height: 30px;
       overflow: hidden;
@@ -302,8 +303,7 @@ a {
     .row ul li div span {
       height: 30px;
       display: block;
-      border-radius: 3px 3px 3px 3px;
-      -webkit-border-radius: 3px 3px 3px 3px;
+      border-radius: 4px;
     }
 
     .row ul li div span {
@@ -362,17 +362,17 @@ a {
     max-width: 90%;
 
     &::before {
-      left: 30px;
+      left: 10px;
     }
 
     .timeline-img {
-      left: 30px;
+      left: 10px;
     }
 
     .timeline-content {
       max-width: 100%;
       width: auto;
-      margin-left: 70px;
+      margin-left: 50px;
     }
 
     .timeline-item {
