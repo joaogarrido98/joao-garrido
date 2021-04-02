@@ -30,11 +30,10 @@ a {
 }
 
 .sectionPic .introduction h1 {
-  text-shadow: 0 0 5px var(--color-neon2), 0 0 15px var(--color-neon2), 0 0 20px var(--color-neon2), 0 0 40px var(--color-neon2), 0 0 60px var(--color-neon3), 0 0 10px var(--color-neon4), 0 0 98px var(--color-neon3);
   color: var(--color-neon);
   text-align: center;
-  -webkit-animation: blink 6s infinite;
-          animation: blink 6s infinite;
+  -webkit-animation: blink 2s infinite;
+          animation: blink 2s infinite;
 }
 
 .sectionPic .introduction h3 {
@@ -251,7 +250,7 @@ a {
   margin: 0 10px 10px 0;
 }
 
-.skills .tag:after {
+.skills .tag::before {
   content: '';
   width: 8px;
   height: 8px;

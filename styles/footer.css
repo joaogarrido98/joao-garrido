@@ -95,8 +95,7 @@
 
 .footer .knowMore {
   position: relative;
-  margin-top: 0.67em;
-  font-size: calc(0.3rem + 2vmin);
+  top: 0.67em;
 }
 
 .footer .social {
