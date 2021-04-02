@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener("submit", submitEmail);
 
     window.addEventListener('scroll', checkPosition);
+
+
+    fetch("../json/projects.json", {
+
+    });
 });
 
 function getYearCopy() {

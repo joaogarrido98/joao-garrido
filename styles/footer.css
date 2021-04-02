@@ -174,10 +174,4 @@
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
-
-@media (max-width: 1320px) {
-  p {
-    max-width: 80% !important;
-  }
-}
 /*# sourceMappingURL=footer.css.map */

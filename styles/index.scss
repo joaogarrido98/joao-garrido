@@ -17,7 +17,6 @@ a {
 //section home, PIC
 //=====================
 .sectionPic {
-  font-size: 1.2em;
   display: flex;
   height: 100vh;
   align-items: center;
@@ -56,10 +55,6 @@ a {
 //===============
 .life_events {
   margin-top: 5rem !important;
-
-  span {
-    font-size: small;
-  }
 }
 
 .timeline {
@@ -346,7 +341,7 @@ a {
 }
 
 .anim {
-  transform: translateX(150px);
+  transform: translateY(150px);
 }
 
 .slideUp {
@@ -359,6 +354,10 @@ a {
 //============
 
 @media(max-width: 900px) {
+  .life_events {
+    text-align: center;
+  }
+
   .timeline {
     max-width: 90%;
 
@@ -399,6 +398,10 @@ a {
         }
       }
     }
+
+    .anim {
+      transform: translateY(150px);
+    }
   }
 }
 
@@ -411,8 +414,7 @@ a {
 
   .sectionPic {
     display: flex;
-    height: 80vh;
-    margin-top: 10vh;
+    text-align: center;
 
     .introduction {
       align-items: center;
@@ -500,6 +502,7 @@ a {
     transform: translateY(0);
   }
 }
+
 
 @keyframes blink {
 
