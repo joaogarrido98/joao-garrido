@@ -80,11 +80,12 @@
     flex-flow: row wrap;
     justify-content: center;
 
+
     a {
       box-shadow: 3px 3px var(--color-dark);
       color: rgba(255, 255, 255, 0.788);
       background: var(--color-tertiary);
-      border-radius: 10px;
+      border-radius: 50%;
       text-decoration: none;
       font-family: fontawesome;
       display: flex;
