@@ -18,16 +18,13 @@ function progressTop() {
     });
 }
 
-
 function scrollChange() {
     const nav = document.querySelector('.nav')
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            nav.style.backgroundColor = 'var(--color-nav)';
-            nav.style.boxShadow = '0 20px 25px -15px rgba(0, 0, 0, .6)'
+            nav.style.backgroundColor = 'var(--color-dark)';
         } else {
             nav.style.backgroundColor = 'transparent';
-            nav.style.boxShadow = 'none';
         }
     });
 }
@@ -50,7 +47,6 @@ function showMenu() {
         menuToggle();
     });
 }
-
 
 function closeOnChoice() {
     [...document.querySelectorAll('.pages')]

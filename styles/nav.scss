@@ -105,8 +105,7 @@
     }
 
     .nav {
-        background-color: var(--color-nav) !important;
-        box-shadow: 0 15px 25px -15px rgba(0, 0, 0, 0.6);
+        background-color: var(--color-dark) !important;
         align-items: center;
     }
 
@@ -124,7 +123,7 @@
         position: absolute;
         display: block;
         width: 100%;
-        background-color: var(--color-nav);
+        background-color: var(--color-dark);
         height: 0px;
         transition: all 0.4s ease-in-out;
         overflow: hidden;

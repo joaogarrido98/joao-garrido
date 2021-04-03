@@ -14,7 +14,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: var(--color-nav);
+  background-color: var(--color-dark);
   padding: 50px 30px 10px 30px;
   position: relative;
   margin-top: 8rem;
@@ -36,7 +36,7 @@
 }
 
 .footer .contactUs {
-  border: 2px solid var(--color-tags);
+  border: 2px solid var(--color-light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +50,6 @@
   background: url(../resources/contactUS.jpg) no-repeat fixed;
   background-size: cover;
   background-position: center center;
-  -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
 }
 
 .footer .contactUs .columns {
@@ -116,8 +114,8 @@
 }
 
 .footer .social a {
-  -webkit-box-shadow: 3px 3px var(--color-grey);
-          box-shadow: 3px 3px var(--color-grey);
+  -webkit-box-shadow: 3px 3px var(--color-dark);
+          box-shadow: 3px 3px var(--color-dark);
   color: white;
   background: var(--color-tertiary);
   border-radius: 10px;
