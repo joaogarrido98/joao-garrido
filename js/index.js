@@ -269,7 +269,7 @@ function getPos(current, active) {
 }
 
 function getProjects() {
-    fetch('../json/projects.json', {
+    fetch('https://joaogarrido98.github.io/joao-garrido/json/projects.json', {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
