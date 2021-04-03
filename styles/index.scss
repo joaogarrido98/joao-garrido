@@ -31,7 +31,7 @@ a {
     }
 
     h3 {
-      color: var(--text-white-dark);
+      color: rgba(255, 255, 255, 0.788);
 
       &:nth-of-type(2) {
         text-decoration: underline solid var(--color-tags);
@@ -53,10 +53,12 @@ a {
 //===============
 // timeline
 //===============
-.life_events {
-  margin-top: 5rem !important;
+.time-wrapper{
+  animation: helloImHere 3s ease-in-out 0s 1 forwards;
+  padding: 30px;
+  background-color: var(--color-dark);
+  border-radius: 12px;
 }
-
 .timeline {
   position: relative;
   max-width: 80%;
@@ -190,6 +192,7 @@ a {
   background: var(--color-light);
   display: inline-block;
   color: white;
+  font-weight: 600;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -515,4 +518,18 @@ a {
   51% {
     opacity: 1;
   }
+}
+
+@keyframes helloImHere{
+   0% {
+     transform: translateY(0);
+   }
+   50%{
+     transform: translateY(-100px);
+     opacity: 0.3;
+   }
+   100%{
+     transform: translate(0);
+     opacity: 1;
+   }
 }

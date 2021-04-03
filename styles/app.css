@@ -9,7 +9,7 @@
   --color-tertiary: #2e2e2e;
 
 
-  
+
   --color-tags: #9d54d8;
   --color-light: #b366f3;
   --color-tags-darker: #743fa0;
@@ -76,8 +76,7 @@ body {
   margin: 0 auto;
   max-width: 80vw;
   padding: 1rem;
-  color: white;
-
+  color: rgba(255, 255, 255, 0.788);
 }
 
 .knowMore {

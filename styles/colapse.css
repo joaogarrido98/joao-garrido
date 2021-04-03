@@ -22,7 +22,7 @@
   width: 100%;
   margin-top: 1rem;
   color: white;
-  border: 2px solid white;
+  border: 2px solid var(--color-tags-darker);
   font-size: 15px;
   letter-spacing: 2px;
   border-radius: 4px;
@@ -50,7 +50,6 @@
   left: calc(50% - 0.75em);
   top: calc(50% - 0.85em);
   border: 0.2em solid transparent;
-  border-right-color: white;
   border-radius: 50%;
   -webkit-animation: button-anim 0.7s linear infinite;
           animation: button-anim 0.7s linear infinite;
@@ -308,7 +307,7 @@
   opacity: 1;
   font-weight: 700;
   text-align: center;
-  color: white;
+  color: rgba(255, 255, 255, 0.788);
   border-radius: 4px;
 }
 
