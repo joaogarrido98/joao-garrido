@@ -53,12 +53,13 @@ a {
 //===============
 // timeline
 //===============
-.time-wrapper{
+.time-wrapper {
   animation: helloImHere 3s ease-in-out 0s 1 forwards;
   padding: 30px;
   background-color: var(--color-dark);
   border-radius: 12px;
 }
+
 .timeline {
   position: relative;
   max-width: 80%;
@@ -384,6 +385,12 @@ a {
   }
 }
 
+@media (min-width: 769px) {
+  :root {
+    --translation: -100px;
+  }
+}
+
 @media (max-width:768px) {
   .contactBtn {
     color: var(--color-primary);
@@ -423,18 +430,9 @@ a {
     position: relative !important;
   }
 
-  @keyframes helloImHere{
-    0% {
-      transform: translateY(0);
-    }
-    50%{
-      transform: translateY(-350px);
-    }
-    100%{
-      transform: translate(0);
-      background-color: transparent;
-    }
- }
+  :root {
+    --translation: -150px;
+  }
 }
 
 @media (max-width:650px) {
@@ -534,17 +532,17 @@ a {
   }
 }
 
-@keyframes helloImHere{
-   0% {
-     transform: translateY(0);
-   }
-   50%{
-     transform: translateY(-100px);
-   }
-   100%{
-     transform: translate(0);
-     background-color: transparent;
-   }
+@keyframes helloImHere {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(var(--translation));
+  }
+
+  100% {
+    transform: translateY(0);
+    background-color: transparent;
+  }
 }
-
-
