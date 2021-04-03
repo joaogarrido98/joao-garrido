@@ -63,12 +63,12 @@ a {
   position: relative;
   max-width: 80%;
   margin: 0 auto;
-  margin-top: 3rem !important;
+  margin-top: 2rem !important;
 
   &::before {
     content: '';
     background: var(--color-tags);
-    width: 4px;
+    width: 5px;
     height: 100%;
     position: absolute;
     left: 50%;
@@ -153,7 +153,9 @@ a {
   padding: 0 !important;
 
   p {
-    padding: 0 12px 12px 12px;
+    background-color: var(--color-tertiary);
+    border-radius: 0 0 12px 12px;
+    padding: 12px 12px 12px 12px;
     text-align: center;
     margin: auto;
   }
@@ -164,10 +166,9 @@ a {
   border-top-left-radius: 12px;
   height: 200px;
   position: relative;
-  margin-bottom: 20px;
 
   img {
-    opacity: 0.5;
+    opacity: 0.7;
     transition: 0.3s all ease-in-out;
     height: 200px;
     width: 100%;
@@ -531,5 +532,6 @@ a {
    100%{
      transform: translate(0);
      opacity: 1;
+     background-color: transparent;
    }
 }
