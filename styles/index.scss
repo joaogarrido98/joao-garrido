@@ -429,11 +429,9 @@ a {
     }
     50%{
       transform: translateY(-150px);
-      opacity: 0.3;
     }
     100%{
       transform: translate(0);
-      opacity: 1;
       background-color: transparent;
     }
  }
@@ -542,11 +540,9 @@ a {
    }
    50%{
      transform: translateY(-100px);
-     opacity: 0.3;
    }
    100%{
      transform: translate(0);
-     opacity: 1;
      background-color: transparent;
    }
 }

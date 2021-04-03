@@ -418,12 +418,10 @@ a {
     50% {
       -webkit-transform: translateY(-150px);
               transform: translateY(-150px);
-      opacity: 0.3;
     }
     100% {
       -webkit-transform: translate(0);
               transform: translate(0);
-      opacity: 1;
       background-color: transparent;
     }
   }
@@ -435,12 +433,10 @@ a {
     50% {
       -webkit-transform: translateY(-150px);
               transform: translateY(-150px);
-      opacity: 0.3;
     }
     100% {
       -webkit-transform: translate(0);
               transform: translate(0);
-      opacity: 1;
       background-color: transparent;
     }
   }
@@ -598,12 +594,10 @@ a {
   50% {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
-    opacity: 0.3;
   }
   100% {
     -webkit-transform: translate(0);
             transform: translate(0);
-    opacity: 1;
     background-color: transparent;
   }
 }
@@ -616,12 +610,10 @@ a {
   50% {
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
-    opacity: 0.3;
   }
   100% {
     -webkit-transform: translate(0);
             transform: translate(0);
-    opacity: 1;
     background-color: transparent;
   }
 }
