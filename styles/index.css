@@ -416,8 +416,8 @@ a {
               transform: translateY(0);
     }
     50% {
-      -webkit-transform: translateY(-150px);
-              transform: translateY(-150px);
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px);
     }
     100% {
       -webkit-transform: translate(0);
@@ -431,8 +431,8 @@ a {
               transform: translateY(0);
     }
     50% {
-      -webkit-transform: translateY(-150px);
-              transform: translateY(-150px);
+      -webkit-transform: translateY(-350px);
+              transform: translateY(-350px);
     }
     100% {
       -webkit-transform: translate(0);
