@@ -1,7 +1,7 @@
 {
   "projects": {
     "MedCare": {
-      "id": 1,
+      "id": 0,
       "description": "First project in high school to help doctors in the hospitals to manage the patient",
       "language": "C",
       "type": "console",
@@ -37,7 +37,7 @@
       }
     },
     "GreenHelp": {
-      "id": 1,
+      "id": 2,
       "description": "GreenHelp is a Website that allows users to see what the GreenHelp App is about.\n This was my project for the final year of High School.",
       "language": ["HTML5", "CSS", "JavaScript", "PHP"],
       "type": "Website",
@@ -55,7 +55,7 @@
       }
     },
     "GreenHelp Admins": {
-      "id": 1,
+      "id": 3,
       "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
       "language": ["HTML5", "CSS", "JavaScript", "PHP"],
       "type": "Web Application",
@@ -73,7 +73,7 @@
       }
     },
     "GreenHelp App": {
-      "id": 1,
+      "id": 4,
       "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
       "language": ["Kotlin", "XML"],
       "type": "Android App",
@@ -91,7 +91,7 @@
       }
     },
     "EuroToPound": {
-      "id": 1,
+      "id": 5,
       "description": "Coroutines way of getting api with spinners.\n This is a simple app for learning purposes about kotlin and coroutines.",
       "language": ["Kotlin", "XML"],
       "type": "Android App",
@@ -109,7 +109,7 @@
       }
     },
     "Deck-Shuffle": {
-      "id": 1,
+      "id": 6,
       "description": "Simple website to test some functions in javascript",
       "language": ["HTML5", "CSS", "JavaScript"],
       "type": "Website",
@@ -127,7 +127,7 @@
       }
     },
     "MovieDatabaseApi": {
-      "id": 1,
+      "id": 7,
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
       "language": ["HTML5", "CSS", "JavaScript"],
       "type": "Website",

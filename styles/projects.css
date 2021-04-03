@@ -1,0 +1,94 @@
+.projects {
+  margin-top: 2em;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel__list {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+}
+
+.carousel__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 0px;
+  width: 150px;
+  height: 250px;
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  position: absolute;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  background-color: aqua;
+}
+
+.carousel__item[data-pos="0"] {
+  z-index: 5;
+}
+
+.carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
+  opacity: 0.7;
+  -webkit-filter: blur(1px) grayscale(10%);
+          filter: blur(1px) grayscale(10%);
+}
+
+.carousel__item[data-pos="-1"] {
+  -webkit-transform: translateX(-40%) scale(0.9);
+          transform: translateX(-40%) scale(0.9);
+  z-index: 4;
+}
+
+.carousel__item[data-pos="1"] {
+  -webkit-transform: translateX(40%) scale(0.9);
+          transform: translateX(40%) scale(0.9);
+  z-index: 4;
+}
+
+.carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
+  opacity: 0.4;
+  -webkit-filter: blur(3px) grayscale(20%);
+          filter: blur(3px) grayscale(20%);
+}
+
+.carousel__item[data-pos="-2"] {
+  -webkit-transform: translateX(-70%) scale(0.8);
+          transform: translateX(-70%) scale(0.8);
+  z-index: 3;
+}
+
+.carousel__item[data-pos="2"] {
+  -webkit-transform: translateX(70%) scale(0.8);
+          transform: translateX(70%) scale(0.8);
+  z-index: 3;
+}
+/*# sourceMappingURL=projects.css.map */
