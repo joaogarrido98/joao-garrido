@@ -10,9 +10,9 @@
 
 
   
-  --color-tags: #913cd6;
-  --color-light: #9a2df3;
-  --color-tags-darker: #7e1fcc;
+  --color-tags: #9d54d8;
+  --color-light: #b366f3;
+  --color-tags-darker: #743fa0;
 
 
   --color-neon: #d5a9ff;
@@ -125,7 +125,7 @@ body {
   position: fixed;
   height: 2px;
   z-index: 1000;
-  background: var(--color-secondary);
+  background: var(--color-dark);
 }
 
 .progress-bar {
