@@ -410,6 +410,40 @@ a {
   .knowMore {
     position: relative !important;
   }
+  @-webkit-keyframes helloImHere {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+      opacity: 0.3;
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+      opacity: 1;
+      background-color: transparent;
+    }
+  }
+  @keyframes helloImHere {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(-150px);
+              transform: translateY(-150px);
+      opacity: 0.3;
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+      opacity: 1;
+      background-color: transparent;
+    }
+  }
 }
 
 @media (max-width: 650px) {

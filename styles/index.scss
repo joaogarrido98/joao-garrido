@@ -422,6 +422,21 @@ a {
   .knowMore {
     position: relative !important;
   }
+
+  @keyframes helloImHere{
+    0% {
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-150px);
+      opacity: 0.3;
+    }
+    100%{
+      transform: translate(0);
+      opacity: 1;
+      background-color: transparent;
+    }
+ }
 }
 
 @media (max-width:650px) {
@@ -535,3 +550,5 @@ a {
      background-color: transparent;
    }
 }
+
+
