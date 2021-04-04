@@ -187,17 +187,25 @@
     </div>
     </div>
     <section id="projects" class="projects">
-      <div class="lprojects-title">
+      <div class="projects-title">
         <h1>My Projects</h1>
       </div>
-      <div class="carousel">
-        <ul class="carousel__list">
-          <li class="carousel__item" data-pos="-2">1</li>
-          <li class="carousel__item" data-pos="-1">2</li>
-          <li class="carousel__item" data-pos="0">3</li>
-          <li class="carousel__item" data-pos="1">4</li>
-          <li class="carousel__item" data-pos="2">5</li>
-        </ul>
+      <div class="project-wrapper">
+        <div class="tabs">
+          <button class="tab chosen" id="all">All</button>
+          <button class="tab" id="web">Web</button>
+          <button class="tab" id="android">Android</button>
+        </div>
+        <div class="carousel">
+          <div class="row">
+            <div id="row" class="carousel-inner">
+            </div>
+          </div>
+          <div class="btn-scroll">
+            <button class="scrolls" id="left"><i class="fa fa-arrow-circle-left"></i></button>
+            <button class="scrolls" id="right"><i class="fa fa-arrow-circle-right"></i></button>
+          </div>
+        </div>
       </div>
     </section>
   </section>

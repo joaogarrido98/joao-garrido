@@ -82,7 +82,6 @@
 
 
     a {
-      box-shadow: 3px 3px var(--color-dark);
       color: rgba(255, 255, 255, 0.788);
       background: var(--color-tertiary);
       border-radius: 50%;
@@ -94,44 +93,67 @@
       width: 60px;
       height: 60px;
       margin: 0 20px;
-      -o-transition: all .5s;
-      -webkit-transition: all .5s;
-      -moz-transition: all .5s;
-      transition: all .5s;
+      transition: all .3s;
       -webkit-font-smoothing: antialiased;
 
       &:nth-of-type(1):hover {
-        background-color: var(--facebook-blue);
+        color: var(--facebook-blue);
+        border: 3px solid var(--facebook-blue);
       }
 
       &:nth-of-type(2):hover {
-        background-color: var(--github-purple);
+        color: var(--github-purple);
+        border: 3px solid var(--github-purple);
       }
 
       &:nth-of-type(3):hover {
-        background-color: var(--linkedin-blue);
+        color: var(--linkedin-blue);
+        border: 3px solid var(--linkedin-blue);
       }
 
       &:nth-of-type(4):hover {
-        background-color: var(--stackoverflow-orange);
+        color: var(--stackoverflow-orange);
+        border: 3px solid var(--stackoverflow-orange);
       }
 
       &:nth-of-type(5):hover {
-        background-color: var(--spotify-green);
+        color: var(--spotify-green);
+        border: 3px solid var(--spotify-green);
+
       }
 
       &:hover>i {
         animation: toBottomFromTop 0.5s var(--te) both;
       }
-
       i {
         position: static;
         font-style: normal;
       }
     }
 
-    a:hover {
-      transform: scale(0.9);
+  }
+}
+
+
+@media (max-width:650px) {
+  .social {
+    a {
+      margin-top: 1rem !important;
     }
+  }
+}
+
+@keyframes toBottomFromTop {
+  49% {
+    transform: translateY(100%);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  51% {
+    opacity: 1;
   }
 }

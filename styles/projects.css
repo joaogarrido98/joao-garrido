@@ -1,94 +1,217 @@
+@charset "UTF-8";
 .projects {
   margin-top: 2em;
 }
 
-.carousel {
+.projects .project-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.carousel__list {
-  padding: 0;
+.projects .tabs {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  width: 70%;
+}
+
+.projects .tabs .tab {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgba(255, 255, 255, 0.788);
+  letter-spacing: 2px;
+  font-size: large;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.projects .tabs .tab.chosen {
+  color: var(--color-tags);
+  border-bottom: 2px solid var(--color-tags);
+}
+
+.projects .tabs .tab:hover {
+  background-color: var(--color-background);
+}
+
+.projects .btn-scroll {
   position: relative;
-  width: 100%;
-  height: 250px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-perspective: 300px;
-          perspective: 300px;
-}
-
-.carousel__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  font-size: 0px;
-  width: 150px;
-  height: 250px;
-  border-radius: 12px;
-  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
-          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.5);
+  text-align: center;
+}
+
+.projects .scrolls {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.projects #left {
+  left: 0;
+}
+
+.projects #right {
+  right: 0;
+}
+
+.projects .carousel {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .carousel-inner {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: scroll;
+  -webkit-transition: 450ms -webkit-transform;
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70px 0;
+  padding-bottom: 10px;
+}
+
+.projects .carousel-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.projects .tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 450ms all;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.projects .tile__img {
+  width: 250px;
+  height: 140.625px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.projects .tile__details {
   position: absolute;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-  background-color: aqua;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-transition: 450ms opacity;
+  transition: 450ms opacity;
 }
 
-.carousel__item[data-pos="0"] {
-  z-index: 5;
+.projects .tile__details:after,
+.projects .tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
 }
 
-.carousel__item[data-pos="-1"], .carousel__item[data-pos="1"] {
-  opacity: 0.7;
-  -webkit-filter: blur(1px) grayscale(10%);
-          filter: blur(1px) grayscale(10%);
+.projects .tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-.carousel__item[data-pos="-1"] {
-  -webkit-transform: translateX(-40%) scale(0.9);
-          transform: translateX(-40%) scale(0.9);
-  z-index: 4;
+.projects .tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
 }
 
-.carousel__item[data-pos="1"] {
-  -webkit-transform: translateX(40%) scale(0.9);
-          transform: translateX(40%) scale(0.9);
-  z-index: 4;
+.projects .tile:hover .tile__details {
+  opacity: 1;
 }
 
-.carousel__item[data-pos="-2"], .carousel__item[data-pos="2"] {
-  opacity: 0.4;
-  -webkit-filter: blur(3px) grayscale(20%);
-          filter: blur(3px) grayscale(20%);
+.projects .tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
 }
 
-.carousel__item[data-pos="-2"] {
-  -webkit-transform: translateX(-70%) scale(0.8);
-          transform: translateX(-70%) scale(0.8);
-  z-index: 3;
+.projects .carousel-inner:hover {
+  -webkit-transform: translate3d(-62.5px, 0, 0);
+          transform: translate3d(-62.5px, 0, 0);
 }
 
-.carousel__item[data-pos="2"] {
-  -webkit-transform: translateX(70%) scale(0.8);
-          transform: translateX(70%) scale(0.8);
-  z-index: 3;
+.projects .carousel-inner:hover .tile {
+  opacity: 0.3;
+}
+
+.projects .carousel-inner:hover .tile:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+
+.projects .tile:hover ~ .tile {
+  -webkit-transform: translate3d(125px, 0, 0);
+          transform: translate3d(125px, 0, 0);
 }
 /*# sourceMappingURL=projects.css.map */
