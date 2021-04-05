@@ -107,7 +107,7 @@
         "2": "euro/img2.jpg",
         "3": "euro/img3.jpg"
       },
-      "preview" : "euro/preview.jpg"
+      "preview" : ["euro/preview.jpg", "euro/preview.gif"]
     },
     "Deck-Shuffle": {
       "description": "Simple website to test some functions in javascript",

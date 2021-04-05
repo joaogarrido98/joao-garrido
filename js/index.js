@@ -266,8 +266,10 @@ function getProjects() {
                 if (projects.hasOwnProperty(i)) {
                     title = i;
                 }
+                let project = projects[i];
+                let img = project["preview"][0];
                 let card = `<div class="tile__media">
-                  <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt="" />
+                  <img class="tile__img" src="../resources/${img}" alt="" />
                 </div>
                 <div class="tile__details">
                   <div class="tile__title">
