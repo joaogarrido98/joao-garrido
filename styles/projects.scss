@@ -40,48 +40,72 @@
         }
     }
 
-
     .btn-scroll {
-        position: relative;
         align-items: center;
         text-align: center;
+        margin-top: 2rem;
+
+        .scrolls {
+            border: none;
+            outline: none;
+        }
+    
+        .arrow {
+            width: 2em;
+            height: 2em;
+            background: transparent;
+            border-top: 4px solid rgba(255, 255, 255, 0.781);
+            border-right: 4px solid rgba(255, 255, 255, 0.781);
+            box-shadow: 0 0 0 var(--color-tags);
+            transition: all 200ms ease;
+            
+            &.left {
+                left: 0;
+                transform: translate3d(0,-50%,0) rotate(-135deg);
+            }
+        
+            &.right {
+                right: 0;
+                transform: translate3d(0,-50%,0) rotate(45deg);
+            }
+            
+            &:hover {
+                border-color: var(--color-tags);
+                box-shadow: 4px -4px 0 rgba(255, 255, 255, 0.781);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-40%,-60%) rotate(45deg);
+                width: 200%;
+                height: 200%;
+            }
+        }
     }
 
-    .scrolls {
-        position: relative;
-        background-color: transparent;
-        border: none;
-        outline: none;
-    }
-
-    #left {
-        left: 0;
-    }
-
-    #right {
-        right: 0;
-    }
-
+    
     .carousel {
         width: 100%;
         align-items: center;
     }
 
     .row {
+        margin-top: 20px;
         width: 100%;
         display: flex;
     }
 
     .carousel-inner {
+        padding: 20px;  
         scroll-behavior: smooth;
         -ms-overflow-style: none;
         scrollbar-width: none;
         overflow-x: scroll;
-        transition: 450ms transform;
-        font-size: 0;
         white-space: nowrap;
-        margin: 70px 0;
-        padding-bottom: 10px;
+        transition: 450ms transform;
 
         &::-webkit-scrollbar {
             display: none;
@@ -89,67 +113,23 @@
     }
 
     .tile {
+        border-radius: 10px;
+        background-color: var(--color-tertiary);
         position: relative;
         display: inline-block;
         width: 250px;
-        height: 140.625px;
-        margin-right: 10px;
-        font-size: 20px;
+        height: 300px;
+        margin: 10px;
         cursor: pointer;
-        transition: 450ms all;
+        transition: 1000ms all;
         transform-origin: center left;
     }
 
     .tile__img {
         width: 250px;
-        height: 140.625px;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-
-    .tile__details {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        font-size: 10px;
-        opacity: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-        transition: 450ms opacity;
-    }
-
-    .tile__details:after,
-    .tile__details:before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: #000;
-    }
-
-    .tile__details:after {
-        margin-top: -25px;
-        margin-left: -25px;
-        width: 50px;
-        height: 50px;
-        border: 3px solid #ecf0f1;
-        line-height: 50px;
-        text-align: center;
-        border-radius: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .tile__details:before {
-        content: '▶';
-        left: 0;
-        width: 100%;
-        font-size: 30px;
-        margin-left: 7px;
-        margin-top: -18px;
-        text-align: center;
-        z-index: 2;
+        height: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     .tile:hover .tile__details {
@@ -157,13 +137,7 @@
     }
 
     .tile__title {
-        position: absolute;
-        bottom: 0;
         padding: 10px;
-    }
-
-    .carousel-inner:hover {
-        transform: translate3d(-62.5px, 0, 0);
     }
 
     .carousel-inner:hover .tile {
@@ -171,11 +145,11 @@
     }
 
     .carousel-inner:hover .tile:hover {
-        transform: scale(1.5);
+        transform: scale(1.2);
         opacity: 1;
     }
 
     .tile:hover~.tile {
-        transform: translate3d(125px, 0, 0);
+        transform: translate3d(50px, 0, 0);
     }
 }

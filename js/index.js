@@ -248,6 +248,8 @@ function checkPosition() {
 }
 
 function getProjects() {
+    let carousel = document.querySelector(".carousel-inner");
+    carousel.innerHTML = "";
     fetch('../json/projects.json', {
         headers: {
             'Content-Type': 'application/json',
@@ -260,7 +262,6 @@ function getProjects() {
         .then(function (data) {
             let projects = data["projects"];
             let i, title;
-            let carousel = document.querySelector(".carousel-inner");
             for (i in projects) {
                 if (projects.hasOwnProperty(i)) {
                     title = i;
@@ -271,6 +272,9 @@ function getProjects() {
                 <div class="tile__details">
                   <div class="tile__title">
                     ${title}
+                  </div>
+                  <div>
+                  <a href="projects.html?project=${title}">Know More</a>
                   </div>
                 </div>`;
                 const ele = document.createElement('div');
