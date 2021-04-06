@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     left();
 
+    tabManage();
+
     const letsBuild = document.getElementById("letsBuild");
     letsBuild.addEventListener('click', (evt) => {
         evt.preventDefault();
@@ -48,19 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('row').scrollLeft -= 500;
     });
 
-    document.querySelector("#all").addEventListener('click', (evt) => {
-        tabManage(evt);
-        getProjects();
-    });
 
-    document.querySelector("#web").addEventListener('click', (evt) => {
-        tabManage(evt);
-        getProjects();
-    });
-    document.querySelector("#android").addEventListener('click', (evt) => {
-        tabManage(evt);
-        getProjects();
-    });
 });
 
 function getYearCopy() {
@@ -248,7 +238,8 @@ function checkPosition() {
 }
 
 function getProjects() {
-    let url = "https://joaogarrido98.github.io/joao-garrido";
+    // let url = "https://joaogarrido98.github.io/joao-garrido";
+    let url = "..";
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     fetch(url + '/json/projects.json', {
@@ -292,9 +283,20 @@ function getProjects() {
         })
 }
 
-function tabManage(evt){  
-    Array.from(document.querySelectorAll('.tab')).forEach(function(el) { 
-        el.classList.remove('chosen');
+function tabManage() {
+    let tabs = document.getElementsByClassName('tab');
+    Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', (evt) => {
+            setActiveClass(evt, tabs);
+        });
     });
-    evt.target.classList.add("chosen");
+   
+}
+
+function setActiveClass(evt, tabs) {
+	Array.prototype.forEach.call(tabs, function(tab) {
+		tab.classList.remove('chosen');
+	});
+	evt.currentTarget.classList.add('chosen');
+    getProjects();
 }
