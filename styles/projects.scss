@@ -127,9 +127,23 @@
 
     .tile__img {
         width: 250px;
-        height: auto;
+        height: 150px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    
+    .img-back{
+        width: 250px;
+        height: 150px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .tile__img:hover{
+       opacity: 0;
     }
 
     .tile:hover .tile__details {

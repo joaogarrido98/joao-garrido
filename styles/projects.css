@@ -163,9 +163,23 @@
 
 .projects .tile__img {
   width: 250px;
-  height: auto;
+  height: 150px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.projects .img-back {
+  width: 250px;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.projects .tile__img:hover {
+  opacity: 0;
 }
 
 .projects .tile:hover .tile__details {

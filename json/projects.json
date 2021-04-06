@@ -53,7 +53,7 @@
         "3": "greenhelp/img3.jpg",
         "4": "greenhelp/img4.jpg"
       },
-      "preview" : "greehelp/preview.jpg"
+      "preview" : ["greenhelp/preview.jpg", "greenhelp/preview.gif"]
     },
     "GreenHelp Admins": {
       "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
@@ -71,7 +71,7 @@
         "2": "greenhelp_admins/img2.jpg",
         "3": "greengelp_admins/img3.jpg"
       },
-      "preview" : "greenhelp_admins/preview.jpg"
+      "preview" : ["greenhelp_admins/preview.jpg", "greenhelp_admins/preview.gif"]
     },
     "GreenHelp App": {
       "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
