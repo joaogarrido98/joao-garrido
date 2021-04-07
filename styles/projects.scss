@@ -9,12 +9,24 @@
     }
 
     .tabs {
+        position: relative;
         align-items: center;
         display: flex;
         justify-content: center;
         padding: 20px 0;
         width: 70%;
+        padding-bottom: 0;
 
+        & .presentation-slider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-light);
+            transform-origin: 0 0;
+            transition: transform .25s;
+        }
         .tab {
             user-select: none;
             cursor: pointer;
@@ -28,14 +40,22 @@
             font-size: large;
             font-weight: 500;
             transition: all 0.2s ease-in-out;
-
             &.chosen {
                 color: var(--color-tags);
-                border-bottom: 2px solid var(--color-tags);
+                font-weight: 600;
             }
 
             &:hover {
                 background-color: var(--color-background);
+            }
+            &:first-child.chosen ~ .presentation-slider {
+                transform: translateX(0) scaleX(0.333);
+            }
+            &:nth-child(2).chosen ~ .presentation-slider {
+                transform: translateX(33.333%) scaleX(0.333);
+            }
+            &:nth-child(3).chosen ~ .presentation-slider {
+                transform: translateX(calc(33.333% * 2)) scaleX(0.333);
             }
         }
     }

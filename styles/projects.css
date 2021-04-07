@@ -19,6 +19,7 @@
 }
 
 .projects .tabs {
+  position: relative;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -30,6 +31,22 @@
           justify-content: center;
   padding: 20px 0;
   width: 70%;
+  padding-bottom: 0;
+}
+
+.projects .tabs .presentation-slider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-light);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform .25s;
+  transition: -webkit-transform .25s;
+  transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 
 .projects .tabs .tab {
@@ -53,11 +70,26 @@
 
 .projects .tabs .tab.chosen {
   color: var(--color-tags);
-  border-bottom: 2px solid var(--color-tags);
+  font-weight: 600;
 }
 
 .projects .tabs .tab:hover {
   background-color: var(--color-background);
+}
+
+.projects .tabs .tab:first-child.chosen ~ .presentation-slider {
+  -webkit-transform: translateX(0) scaleX(0.333);
+          transform: translateX(0) scaleX(0.333);
+}
+
+.projects .tabs .tab:nth-child(2).chosen ~ .presentation-slider {
+  -webkit-transform: translateX(33.333%) scaleX(0.333);
+          transform: translateX(33.333%) scaleX(0.333);
+}
+
+.projects .tabs .tab:nth-child(3).chosen ~ .presentation-slider {
+  -webkit-transform: translateX(calc(33.333% * 2)) scaleX(0.333);
+          transform: translateX(calc(33.333% * 2)) scaleX(0.333);
 }
 
 .projects .btn-scroll {

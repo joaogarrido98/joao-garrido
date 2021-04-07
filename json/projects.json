@@ -144,6 +144,24 @@
         "3": "movie/img3.jpg"
       },
       "preview" : ["movie/preview.jpg", "movie/preview.gif"]
+    },
+    "Tostadas":{
+      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
+      "language": ["Kotlin"],
+      "type": "Android Library",
+      "tech": "",
+      "year": "2021",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/tostada.git",
+      "url": "",
+      "images": {
+        "1": "tostadas/img1.jpg",
+        "2": "tostadas/img2.jpg",
+        "3": "tostadas/img3.jpg"
+      },
+      "preview" : ["tostadas/preview.jpg", "tostadas/preview.gif"]
     }
   }
 }
