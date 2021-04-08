@@ -27,6 +27,7 @@
             transform-origin: 0 0;
             transition: transform .25s;
         }
+
         .tab {
             user-select: none;
             cursor: pointer;
@@ -40,6 +41,7 @@
             font-size: large;
             font-weight: 500;
             transition: all 0.2s ease-in-out;
+
             &.chosen {
                 color: var(--color-tags);
                 font-weight: 600;
@@ -48,13 +50,16 @@
             &:hover {
                 background-color: var(--color-background);
             }
-            &:first-child.chosen ~ .presentation-slider {
+
+            &:first-child.chosen~.presentation-slider {
                 transform: translateX(0) scaleX(0.333);
             }
-            &:nth-child(2).chosen ~ .presentation-slider {
+
+            &:nth-child(2).chosen~.presentation-slider {
                 transform: translateX(33.333%) scaleX(0.333);
             }
-            &:nth-child(3).chosen ~ .presentation-slider {
+
+            &:nth-child(3).chosen~.presentation-slider {
                 transform: translateX(calc(33.333% * 2)) scaleX(0.333);
             }
         }
@@ -69,7 +74,7 @@
             border: none;
             outline: none;
         }
-    
+
         .arrow {
             width: 2em;
             height: 2em;
@@ -78,17 +83,17 @@
             border-right: 4px solid rgba(255, 255, 255, 0.781);
             box-shadow: 0 0 0 var(--color-tags);
             transition: all 200ms ease;
-            
+
             &.left {
                 left: 0;
-                transform: translate3d(0,-50%,0) rotate(-135deg);
+                transform: translate3d(0, -50%, 0) rotate(-135deg);
             }
-        
+
             &.right {
                 right: 0;
-                transform: translate3d(0,-50%,0) rotate(45deg);
+                transform: translate3d(0, -50%, 0) rotate(45deg);
             }
-            
+
             &:hover {
                 border-color: var(--color-tags);
                 box-shadow: 4px -4px 0 rgba(255, 255, 255, 0.781);
@@ -99,14 +104,14 @@
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-40%,-60%) rotate(45deg);
+                transform: translate(-40%, -60%) rotate(45deg);
                 width: 200%;
                 height: 200%;
             }
         }
     }
 
-    
+
     .carousel {
         width: 100%;
         align-items: center;
@@ -119,7 +124,7 @@
     }
 
     .carousel-inner {
-        padding: 30px;  
+        padding: 30px;
         scroll-behavior: smooth;
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -137,34 +142,33 @@
         background-color: var(--color-tertiary);
         position: relative;
         display: inline-block;
-        width: 250px;
-        height: 300px;
+        width: 300px;
+        height: auto;
         margin: 10px;
         cursor: pointer;
+        border-radius: 16px;
         transition: 1000ms all;
         transform-origin: center left;
-        box-shadow: 0px 0px 10px var(--color-tags);
+        box-shadow: 0px 0px 10px rgba(36, 36, 36, 0.253);
     }
 
     .tile__img {
-        width: 250px;
-        height: 150px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        width: 300px;
+        height: 200px;
+        border-radius: 16px;
     }
-    
-    .img-back{
-        width: 250px;
-        height: 150px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+
+    .img-back {
+        width: 300px;
+        height: 200px;
+        border-radius: 16px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
 
-    .tile__img:hover{
-       opacity: 0;
+    .tile__img:hover {
+        opacity: 0;
     }
 
     .tile:hover .tile__details {
@@ -180,8 +184,12 @@
     }
 
     .carousel-inner:hover .tile:hover {
-        transform: scale(1.2);
         opacity: 1;
+        transform:scale(1.2);
+
+        &:last-child{
+            transform: scale(1.2) translateX(-20px);
+        }
     }
 
     .tile:hover~.tile {

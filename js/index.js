@@ -238,8 +238,8 @@ function checkPosition() {
 }
 
 function getProjects() {
-    let url = "https://joaogarrido98.github.io/joao-garrido";
-    //let url = "..";
+    //let url = "https://joaogarrido98.github.io/joao-garrido";
+    let url = "..";
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     fetch(url + '/json/projects.json', {
@@ -262,16 +262,11 @@ function getProjects() {
                 let img = project["preview"][0];
                 let gif = project["preview"][1];
                 let card = `<div class="tile__media">
-                  <div class="img-back" style="background-image: url('${url}/resources/${gif}');"><img class="tile__img" src="${url}/resources/${img}" alt="${title}"/></div>
+                  <div class="img-back" style="background-image: url('${url}/resources/${gif}');">
+                  <img class="tile__img" src="${url}/resources/${img}"/>
+                  </div>
                 </div>
-                <div class="tile__details">
-                  <div class="tile__title">
-                    ${title}
-                  </div>
-                  <div>
-                  <a href="projects.html?project=${title}">Know More</a>
-                  </div>
-                </div>`;
+                `;
                 const ele = document.createElement('div');
                 ele.innerHTML = card;
                 ele.className = "tile";
