@@ -161,7 +161,7 @@
         "2": "tostadas/img2.jpg",
         "3": "tostadas/img3.jpg"
       },
-      "preview" : ["tostada/preview.jpg", "tostada/preview.webp"]
+      "preview" : ["tostada/preview.JPG", "tostada/preview.webp"]
     }
   }
 }
