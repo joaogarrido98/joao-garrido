@@ -238,8 +238,8 @@ function checkPosition() {
 }
 
 function getProjects() {
-    //let url = "https://joaogarrido98.github.io/joao-garrido";
-    let url = "..";
+    let url = "https://joaogarrido98.github.io/joao-garrido";
+    //let url = "..";
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     fetch(url + '/json/projects.json', {
@@ -261,9 +261,14 @@ function getProjects() {
                 let project = projects[i];
                 let img = project["preview"][0];
                 let gif = project["preview"][1];
+                let fa = getFa(project["type"]);
                 let card = `<div class="tile__media">
                   <div class="img-back" style="background-image: url('${url}/resources/${gif}');">
                   <img class="tile__img" src="${url}/resources/${img}"/>
+                  <div class="more">
+                  <i class="${fa}"></i>
+                  <p>${title}</p>
+                  </div>
                   </div>
                 </div>
                 `;
@@ -294,4 +299,22 @@ function setActiveClass(evt, tabs) {
 	});
 	evt.currentTarget.classList.add('chosen');
     getProjects();
+}
+
+function getFa(type){
+    if(type === "Desktop"){
+        return "fas fa-desktop";
+    }
+    if(type === "App"){
+        return "fas fa-mobile-alt";
+    }
+    if(type === "Console"){
+        return "fas fa-terminal";
+    }
+    if(type === "Website"){
+        return "far fa-window-maximize";
+    }
+    if(type === "Library"){
+        return "fas fa-book";
+    }
 }

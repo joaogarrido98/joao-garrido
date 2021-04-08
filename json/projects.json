@@ -3,9 +3,9 @@
     "EasyPolice": {
       "description": "Second year School Project, EasyPolice\n This program lets the user (police) register crimes and occurrences. Register people and check their criminal record.",
       "language": "C#",
-      "type": "Windows Forms",
+      "type": "Desktop",
       "tech": "Sql Server",
-      "year": "2018/2020",
+      "year": "2018/2019",
       "state": true,
       "db": true,
       "lang": "Portuguese",
@@ -21,7 +21,7 @@
     "MedCare": {
       "description": "First project in high school to help doctors in the hospitals to manage the patient",
       "language": "C",
-      "type": "console",
+      "type": "Console",
       "tech": "",
       "year": "2017/2018",
       "state": true,
@@ -58,7 +58,7 @@
     "GreenHelp Admins": {
       "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
       "language": ["HTML5", "CSS", "JavaScript", "PHP"],
-      "type": "Web Application",
+      "type": "Website",
       "tech": ["Bootstrap", "jQuery", "phpmyadmin", "mySql", "Firebase"],
       "year": "2019/2020",
       "state": true,
@@ -76,7 +76,7 @@
     "GreenHelp App": {
       "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
       "language": ["Kotlin", "XML"],
-      "type": "Android App",
+      "type": "App",
       "tech": ["Firebase"],
       "year": "2019/2020",
       "state": true,
@@ -94,7 +94,7 @@
     "EuroToPound": {
       "description": "Coroutines way of getting api with spinners.\n This is a simple app for learning purposes about kotlin and coroutines.",
       "language": ["Kotlin", "XML"],
-      "type": "Android App",
+      "type": "App",
       "tech": "",
       "year": "2020",
       "state": true,
@@ -148,7 +148,7 @@
     "Tostadas":{
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
       "language": ["Kotlin"],
-      "type": "Android Library",
+      "type": "Library",
       "tech": "",
       "year": "2021",
       "state": true,
@@ -161,7 +161,7 @@
         "2": "tostadas/img2.jpg",
         "3": "tostadas/img3.jpg"
       },
-      "preview" : ["tostadas/preview.jpg", "tostadas/preview.webp"]
+      "preview" : ["tostada/preview.jpg", "tostada/preview.webp"]
     }
   }
 }
