@@ -191,6 +191,8 @@
   transition: 1000ms all;
   -webkit-transform-origin: center left;
           transform-origin: center left;
+  -webkit-box-shadow: 0px 0px 10px var(--color-tags);
+          box-shadow: 0px 0px 10px var(--color-tags);
 }
 
 .projects .tile__img {

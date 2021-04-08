@@ -1,23 +1,5 @@
 {
   "projects": {
-    "MedCare": {
-      "description": "First project in high school to help doctors in the hospitals to manage the patient",
-      "language": "C",
-      "type": "console",
-      "tech": "",
-      "year": "2017/2018",
-      "state": true,
-      "db": false,
-      "lang": "Portuguese",
-      "github": "https://github.com/joaogarrido98/MedCare.git",
-      "url": "",
-      "images": {
-        "1": "medcare/img1.jpg",
-        "2": "medcare/img2.jpg",
-        "3": "medcare/img3.jpg"
-      },
-      "preview" :["medcare/preview.jpg" , "medcare/preview.gif"] 
-    },
     "EasyPolice": {
       "description": "Second year School Project, EasyPolice\n This program lets the user (police) register crimes and occurrences. Register people and check their criminal record.",
       "language": "C#",
@@ -35,6 +17,24 @@
         "3": "easypolice/img3.jpg"
       },
       "preview" : ["easypolice/preview.jpg", "easypolice/preview.gif"]
+    },
+    "MedCare": {
+      "description": "First project in high school to help doctors in the hospitals to manage the patient",
+      "language": "C",
+      "type": "console",
+      "tech": "",
+      "year": "2017/2018",
+      "state": true,
+      "db": false,
+      "lang": "Portuguese",
+      "github": "https://github.com/joaogarrido98/MedCare.git",
+      "url": "",
+      "images": {
+        "1": "medcare/img1.jpg",
+        "2": "medcare/img2.jpg",
+        "3": "medcare/img3.jpg"
+      },
+      "preview" :["medcare/preview.jpg" , "medcare/preview.gif"] 
     },
     "GreenHelp": {
       "description": "GreenHelp is a Website that allows users to see what the GreenHelp App is about.\n This was my project for the final year of High School.",

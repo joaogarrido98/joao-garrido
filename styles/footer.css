@@ -43,7 +43,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 12px;
-  margin-top: -8rem;
+  margin-top: -7rem;
   width: 85%;
   height: auto;
   padding: 30px;
@@ -80,7 +80,7 @@
   color: rgba(255, 255, 255, 0.788);
   font-weight: 600;
   line-height: 1.125;
-  margin-bottom: 0.67em;
+  margin-bottom: 0;
   letter-spacing: 2px;
 }
 
@@ -89,11 +89,6 @@
   color: rgba(255, 255, 255, 0.788);
   max-width: 100%;
   margin-top: 0.67em;
-}
-
-.footer .knowMore {
-  position: relative;
-  top: 0.67em;
 }
 
 .footer .social {
