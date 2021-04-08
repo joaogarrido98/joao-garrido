@@ -16,7 +16,7 @@
         "2": "easypolice/img2.jpg",
         "3": "easypolice/img3.jpg"
       },
-      "preview" : ["easypolice/preview.jpg", "easypolice/preview.gif"]
+      "preview" : ["easypolice/preview.jpg", "easypolice/preview.webp"]
     },
     "MedCare": {
       "description": "First project in high school to help doctors in the hospitals to manage the patient",
@@ -34,7 +34,7 @@
         "2": "medcare/img2.jpg",
         "3": "medcare/img3.jpg"
       },
-      "preview" :["medcare/preview.jpg" , "medcare/preview.gif"] 
+      "preview" :["medcare/preview.jpg" , "medcare/preview.webp"] 
     },
     "GreenHelp": {
       "description": "GreenHelp is a Website that allows users to see what the GreenHelp App is about.\n This was my project for the final year of High School.",
@@ -53,7 +53,7 @@
         "3": "greenhelp/img3.jpg",
         "4": "greenhelp/img4.jpg"
       },
-      "preview" : ["greenhelp/preview.jpg", "greenhelp/preview.gif"]
+      "preview" : ["greenhelp/preview.jpg", "greenhelp/preview.webp"]
     },
     "GreenHelp Admins": {
       "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
@@ -71,7 +71,7 @@
         "2": "greenhelp_admins/img2.jpg",
         "3": "greengelp_admins/img3.jpg"
       },
-      "preview" : ["greenhelp_admins/preview.jpg", "greenhelp_admins/preview.gif"]
+      "preview" : ["greenhelp_admins/preview.jpg", "greenhelp_admins/preview.webp"]
     },
     "GreenHelp App": {
       "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
@@ -107,7 +107,7 @@
         "2": "euro/img2.jpg",
         "3": "euro/img3.jpg"
       },
-      "preview" : ["euro/preview.jpg", "euro/preview.gif"]
+      "preview" : ["euro/preview.jpg", "euro/preview.webp"]
     },
     "Deck-Shuffle": {
       "description": "Simple website to test some functions in javascript",
@@ -125,7 +125,7 @@
         "2": "deck/img2.jpg",
         "3": "deck/img3.jpg"
       },
-      "preview" : ["deck/preview.jpg", "deck/preview.gif"]
+      "preview" : ["deck/preview.jpg", "deck/preview.webp"]
     },
     "MovieDatabaseApi": {
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
@@ -143,7 +143,7 @@
         "2": "movie/img2.jpg",
         "3": "movie/img3.jpg"
       },
-      "preview" : ["movie/preview.jpg", "movie/preview.gif"]
+      "preview" : ["movie/preview.jpg", "movie/preview.webp"]
     },
     "Tostadas":{
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
@@ -161,7 +161,7 @@
         "2": "tostadas/img2.jpg",
         "3": "tostadas/img3.jpg"
       },
-      "preview" : ["tostadas/preview.jpg", "tostadas/preview.gif"]
+      "preview" : ["tostadas/preview.jpg", "tostadas/preview.webp"]
     }
   }
 }
