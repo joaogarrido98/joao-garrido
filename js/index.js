@@ -239,7 +239,6 @@ function checkPosition() {
 
 function getProjects(choice) {
     let url = "https://joaogarrido98.github.io/joao-garrido";
-    let url = "..";
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     fetch(url + '/json/projects.json', {
