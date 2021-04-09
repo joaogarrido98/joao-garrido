@@ -237,9 +237,9 @@ function checkPosition() {
     }
 }
 
-function getProjects() {
+function getProjects(choice) {
     let url = "https://joaogarrido98.github.io/joao-garrido";
-    //let url = "..";
+    let url = "..";
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     fetch(url + '/json/projects.json', {
@@ -252,7 +252,7 @@ function getProjects() {
             return response.json();
         })
         .then(function (data) {
-            let projects = data["projects"];
+            let projects = getJson(choice, data);
             let i, title;
             for (i in projects) {
                 if (projects.hasOwnProperty(i)) {
@@ -284,37 +284,49 @@ function getProjects() {
 }
 
 function tabManage() {
+    let choice;
     let tabs = document.getElementsByClassName('tab');
     Array.prototype.forEach.call(tabs, function (tab) {
         tab.addEventListener('click', (evt) => {
             setActiveClass(evt, tabs);
+            choice = tab.id;
+            getProjects(choice);
         });
     });
-   
 }
 
 function setActiveClass(evt, tabs) {
-	Array.prototype.forEach.call(tabs, function(tab) {
-		tab.classList.remove('chosen');
-	});
-	evt.currentTarget.classList.add('chosen');
-    getProjects();
+    Array.prototype.forEach.call(tabs, function (tab) {
+        tab.classList.remove('chosen');
+    });
+    evt.currentTarget.classList.add('chosen');
 }
 
-function getFa(type){
-    if(type === "Desktop"){
+function getFa(type) {
+    if (type === "Desktop") {
         return "fas fa-desktop";
     }
-    if(type === "App"){
+    if (type === "App") {
         return "fas fa-mobile-alt";
     }
-    if(type === "Console"){
+    if (type === "Console") {
         return "fas fa-terminal";
     }
-    if(type === "Website"){
+    if (type === "Website") {
         return "far fa-window-maximize";
     }
-    if(type === "Library"){
+    if (type === "Library") {
         return "fas fa-book";
     }
+}
+
+function getJson(choice, data){
+    if(choice === "all"){
+        return projects = data["projects"];
+    }
+    if(choice === "web"){
+       return projects = data["projects"];
+    }
+    if(choice === "android")7
+    return projects = data["projects"];
 }

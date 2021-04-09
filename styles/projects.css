@@ -55,7 +55,7 @@
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
-  width: 100%;
+  width: 33.33333%;
   padding: 10px;
   background-color: transparent;
   border: none;
@@ -172,6 +172,8 @@
   transition: 450ms -webkit-transform;
   transition: 450ms transform;
   transition: 450ms transform, 450ms -webkit-transform;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
 }
 
 .projects .carousel-inner::-webkit-scrollbar {
@@ -179,6 +181,7 @@
 }
 
 .projects .tile {
+  scroll-snap-align: start;
   background-color: var(--color-tertiary);
   position: relative;
   display: inline-block;
@@ -275,5 +278,11 @@
 .projects .tile:hover ~ .tile {
   -webkit-transform: translate3d(50px, 0, 0);
           transform: translate3d(50px, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

@@ -9,7 +9,6 @@
   margin-top: 20px;
 
   &.active {
-    color: #444;
     max-height: 100vh;
     transition: all 0.2s, max-height 2s;
   }

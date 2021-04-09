@@ -422,6 +422,19 @@ a {
   }
 }
 
+@media (max-width: 426px) {
+  .timeline::before {
+    left: -5px;
+  }
+  .timeline .timeline-img {
+    left: -5px;
+  }
+  .timeline .timeline-content {
+    margin-left: 30px;
+    width: 100%;
+  }
+}
+
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;

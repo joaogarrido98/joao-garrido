@@ -436,11 +436,22 @@ a {
   }
 }
 
+@media(max-width:426px){
+  .timeline{
+    &::before{
+      left: -5px;
+    }
 
-//===============
-//keyframes
-//===============
+    .timeline-img{
+      left: -5px;
+    }
 
+    .timeline-content{
+      margin-left: 30px;
+      width: 100%;
+    }
+  }
+}
 
 @keyframes fadeInLeft {
   0% {
@@ -459,7 +470,6 @@ a {
     transform: translateY(0);
   }
 }
-
 
 @keyframes blink {
 

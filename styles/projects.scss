@@ -31,7 +31,7 @@
         .tab {
             user-select: none;
             cursor: pointer;
-            width: 100%;
+            width: 33.33333%;
             padding: 10px;
             background-color: transparent;
             border: none;
@@ -131,6 +131,7 @@
         overflow-x: scroll;
         white-space: nowrap;
         transition: 450ms transform;
+        scroll-snap-type: x mandatory;
 
         &::-webkit-scrollbar {
             display: none;
@@ -138,6 +139,7 @@
     }
 
     .tile {
+        scroll-snap-align: start;
         background-color: var(--color-tertiary);
         position: relative;
         display: inline-block;
@@ -211,4 +213,14 @@
     .tile:hover~.tile {
         transform: translate3d(50px, 0, 0);
     }
+}
+
+@media(max-width: 768px){
+    .projects-title{
+        text-align: center;
+    }
+}
+
+@media(max-width:425px){
+
 }
