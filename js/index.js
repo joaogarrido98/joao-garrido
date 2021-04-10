@@ -274,7 +274,7 @@ function getJson() {
             return response.json();
         })
         .then(function (data) {
-            getProjects("all", data);
+            getProjects("all", data,url);
             json = data;
         })
         .catch(error => {
@@ -295,8 +295,7 @@ function tabManage() {
     });
 }
 
-function getProjects(choice, data) {
-    let url = "..";
+function getProjects(choice, data,url) {
     let projects = getType(choice, data);
     let i, title;
     let carousel = document.querySelector(".carousel-inner");
