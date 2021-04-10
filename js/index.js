@@ -261,8 +261,8 @@ function getFa(type) {
     }
 }
 
-//let url = ".."
-let url = "https://joaogarrido98.github.io/joao-garrido";
+let url = ".."
+//let url = "https://joaogarrido98.github.io/joao-garrido";
 let json;
 
 function getJson() {
@@ -301,18 +301,21 @@ function getProjects(choice, data) {
     let i, title;
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
+    let wrapper = document.createElement('div');
+    wrapper.className = "tile-wrapper";
     for (i in projects) {
         let project = projects[i];
         title = project.name;
         let img = project["preview"][0];
         let gif = project["preview"][1];
         let fa = getFa(project["type"]);
-        let card = `<div class="tile__media">
+        let card = `
+                 <div class="tile__media">
                   <div class="img-back" style="background-image: url('${url}/resources/${gif}');">
                   <img class="tile__img" src="${url}/resources/${img}"/>
                   <div class="more">
                   <i class="${fa}"></i>
-                  <p>${title}</p>
+                  <p>Open Project</p>
                   </div>
                   </div>
                 </div>
@@ -320,17 +323,15 @@ function getProjects(choice, data) {
         const ele = document.createElement('div');
         ele.innerHTML = card;
         ele.className = "tile";
-        carousel.appendChild(ele);
+        wrapper.appendChild(ele);
     }
+    carousel.appendChild(wrapper);
 }
 
 function getType(choice, data) {
     let project = [];
     if (choice === "all") {
-        for (let i = 0; i < data["projects"].length; i++) {
-            project.push(data["projects"][i]);
-        }
-        return project;
+        return data["projects"];
     }
     if (choice === "web") {
         for (let i = 0; i < data["projects"].length; i++) {

@@ -168,20 +168,18 @@
   scrollbar-width: none;
   overflow-x: scroll;
   white-space: nowrap;
-  -webkit-transition: 450ms -webkit-transform;
-  transition: 450ms -webkit-transform;
-  transition: 450ms transform;
-  transition: 450ms transform, 450ms -webkit-transform;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
 }
 
 .projects .carousel-inner::-webkit-scrollbar {
   display: none;
 }
 
+.projects .tile-wrapper {
+  -webkit-animation: getProjects 0.6s ease-in-out 0s 1 forwards;
+          animation: getProjects 0.6s ease-in-out 0s 1 forwards;
+}
+
 .projects .tile {
-  scroll-snap-align: start;
   background-color: var(--color-tertiary);
   position: relative;
   display: inline-block;
@@ -223,9 +221,10 @@
 }
 
 .projects .more {
-  width: 100%;
-  height: 100%;
-  border-radius: 14px;
+  padding: 5px;
+  border-bottom-right-radius: 14px;
+  bottom: 0;
+  right: 0;
   position: absolute;
   visibility: hidden;
   display: -webkit-box;
@@ -234,21 +233,23 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-weight: 600;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: var(--color-light-transparent);
-  -webkit-transition: visibility 0.3s linear, opacity 0.3s linear;
-  transition: visibility 0.3s linear, opacity 0.3s linear;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--color-light);
+  word-wrap: break-word;
 }
 
-.projects .morep {
-  margin-top: 0;
+.projects .more p,
+.projects .more i {
+  padding: 5px;
+  margin: 0;
+  font-size: small;
 }
 
 .projects .tile:hover .tile__img {
@@ -283,6 +284,28 @@
 @media (max-width: 768px) {
   .projects-title {
     text-align: center;
+  }
+}
+
+@-webkit-keyframes getProjects {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes getProjects {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=projects.css.map */
