@@ -302,10 +302,8 @@ function getProjects(choice, data) {
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     for (i in projects) {
-        if (projects.hasOwnProperty(i)) {
-            title = i;
-        }
         let project = projects[i];
+        title = project.name
         let img = project["preview"][0];
         let gif = project["preview"][1];
         let fa = getFa(project["type"]);
@@ -327,21 +325,25 @@ function getProjects(choice, data) {
 }
 
 function getType(choice, data) {
-    let project;
+    let project = [];
     if (choice === "all") {
-        return projects = data["projects"];
+        for (let i = 0; i < data["projects"].length; i++) {
+            project.push(data["projects"][i]);
+        }
+        return project;
     }
     if (choice === "web") {
-        let len = Object.keys(data["projects"]).length
-        for (let i = 0; i < len; i++) {
-            console.log(Object.hasOwnProperty[data]);
+        for (let i = 0; i < data["projects"].length; i++) {
+            if (data["projects"][i].type === "Website") {
+                project.push(data["projects"][i]);
+            }
         }
         return project;
     }
     if (choice === "android") {
-        for (element in data["projects"]) {
-            if (element.type === "App") {
-                project.push(element);
+        for (let i = 0; i < data["projects"].length; i++) {
+            if (data["projects"][i].type === "App") {
+                project.push(data["projects"][i]);
             }
         }
         return project;

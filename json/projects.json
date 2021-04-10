@@ -1,6 +1,7 @@
 {
-  "projects": {
-    "EasyPolice": {
+  "projects": [
+     {
+      "name": "EasyPolice",
       "description": "Second year School Project, EasyPolice\n This program lets the user (police) register crimes and occurrences. Register people and check their criminal record.",
       "language": "C#",
       "type": "Desktop",
@@ -18,7 +19,8 @@
       },
       "preview" : ["easypolice/preview.jpg", "easypolice/preview.webp"]
     },
-    "MovieDatabaseApi": {
+    {
+      "name": "MovieDatabaseApi",
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
       "language": ["HTML5", "CSS", "JavaScript"],
       "type": "Website",
@@ -36,7 +38,8 @@
       },
       "preview" : ["movie/preview.jpg", "movie/preview.webp"]
     },
-    "Tostadas":{
+    {
+      "name":"Tostadas",
       "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
       "language": ["Kotlin"],
       "type": "Library",
@@ -54,7 +57,8 @@
       },
       "preview" : ["tostada/preview.JPG", "tostada/preview.webp"]
     },
-    "MedCare": {
+    { 
+      "name" : "MedCare",
       "description": "First project in high school to help doctors in the hospitals to manage the patient",
       "language": "C",
       "type": "Console",
@@ -72,7 +76,8 @@
       },
       "preview" :["medcare/preview.jpg" , "medcare/preview.webp"] 
     },
-    "GreenHelp": {
+    {
+      "name" : "GreenHelp",
       "description": "GreenHelp is a Website that allows users to see what the GreenHelp App is about.\n This was my project for the final year of High School.",
       "language": ["HTML5", "CSS", "JavaScript", "PHP"],
       "type": "Website",
@@ -91,7 +96,8 @@
       },
       "preview" : ["greenhelp/preview.jpg", "greenhelp/preview.webp"]
     },
-    "GreenHelp Admins": {
+    {
+      "name" : "GreenHelp Admins",
       "description": "GreenHelp Admins is a Website that allows admins to Update the GreenHelp App and to manage the company",
       "language": ["HTML5", "CSS", "JavaScript", "PHP"],
       "type": "Website",
@@ -109,7 +115,8 @@
       },
       "preview" : ["greenhelp_admins/preview.jpg", "greenhelp_admins/preview.webp"]
     },
-    "GreenHelp App": {
+    {
+      "name" : "GreenHelp App",
       "description": "GreenHelp App is an app that allows users to see Vegan/Vegetarian restaurants and recipes.",
       "language": ["Kotlin", "XML"],
       "type": "App",
@@ -127,7 +134,8 @@
       },
       "preview" : "greenhelp_app/preview.jpg"
     },
-    "EuroToPound": {
+    {
+      "name" : "EuroToPound",
       "description": "Coroutines way of getting api with spinners.\n This is a simple app for learning purposes about kotlin and coroutines.",
       "language": ["Kotlin", "XML"],
       "type": "App",
@@ -145,7 +153,8 @@
       },
       "preview" : ["euro/preview.jpg", "euro/preview.webp"]
     },
-    "Deck-Shuffle": {
+    {
+      "name":"Deck-Shuffle",
       "description": "Simple website to test some functions in javascript",
       "language": ["HTML5", "CSS", "JavaScript"],
       "type": "Website",
@@ -163,5 +172,5 @@
       },
       "preview" : ["deck/preview.jpg", "deck/preview.webp"]
     }
-  }
+  ]
 }
