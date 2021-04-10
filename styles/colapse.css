@@ -21,7 +21,7 @@
   width: 100%;
   margin-top: 1rem;
   color: white;
-  border: 2px solid var(--color-tags);
+  border: 2px solid white;
   font-size: 15px;
   letter-spacing: 2px;
   border-radius: 4px;
@@ -38,7 +38,6 @@
 
 .action-btn:hover {
   background-color: var(--color-tags-darker);
-  border-color: var(--color-tags-darker);
 }
 
 .action-btn::after {
@@ -50,6 +49,7 @@
   left: calc(50% - 0.75em);
   top: calc(50% - 0.85em);
   border: 0.2em solid transparent;
+  border-right-color: white;
   border-radius: 50%;
   -webkit-animation: button-anim 0.7s linear infinite;
           animation: button-anim 0.7s linear infinite;
@@ -307,7 +307,7 @@
   opacity: 1;
   font-weight: 700;
   text-align: center;
-  color: rgba(255, 255, 255, 0.788);
+  color: white;
   border-radius: 4px;
 }
 

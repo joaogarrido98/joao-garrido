@@ -90,7 +90,7 @@ function submitEmail(event) {
     let phoneValid = validatePhone(phone.value, phone);
     let messageValid = validateMessage(message.value, message);
     let actionBtn = document.querySelector(".action-btn");
-    actionBtn.classList.toggle("loading");
+    actionBtn.classList.add("loading");
     actionBtn.disabled = true;
     let data = new FormData(event.target);
     if (!emailValid) {
@@ -115,16 +115,18 @@ function submitEmail(event) {
         }).then(response => {
             event.target.reset();
             status.style.display = "block";
-            status.innerHTML = "Message sent! We will be in contact soon!"
-            status.style.backgroundColor = "#3aba6f"
+            status.innerHTML = "Message sent! We will be in contact soon!";
+            status.style.backgroundColor = "#3aba6f";
+            actionBtn.classList.remove("loading");
+            actionBtn.disabled = false;
         }).catch(error => {
             status.style.display = "block";
             status.innerHTML = "Something went wrong. Try again later!";
-            status.style.backgroundColor = "#f05a5c"
+            status.style.backgroundColor = "#f05a5c";
+            actionBtn.classList.remove("loading");
+            actionBtn.disabled = false;
         });
     }
-    actionBtn.classList.toggle("loading");
-    actionBtn.disabled = false;
 }
 
 function getActiveMenu() {
