@@ -18,6 +18,42 @@
       },
       "preview" : ["easypolice/preview.jpg", "easypolice/preview.webp"]
     },
+    "MovieDatabaseApi": {
+      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
+      "language": ["HTML5", "CSS", "JavaScript"],
+      "type": "Website",
+      "tech": "MovieDatabase Api",
+      "year": "2020/2021",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/MovieDatabaseAPI.git",
+      "url": "https://joaogarrido98.github.io/MovieDatabaseAPI/",
+      "images": {
+        "1": "movie/img1.jpg",
+        "2": "movie/img2.jpg",
+        "3": "movie/img3.jpg"
+      },
+      "preview" : ["movie/preview.jpg", "movie/preview.webp"]
+    },
+    "Tostadas":{
+      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
+      "language": ["Kotlin"],
+      "type": "Library",
+      "tech": "",
+      "year": "2021",
+      "state": true,
+      "db": false,
+      "lang": "English",
+      "github": "https://github.com/joaogarrido98/tostada.git",
+      "url": "",
+      "images": {
+        "1": "tostadas/img1.jpg",
+        "2": "tostadas/img2.jpg",
+        "3": "tostadas/img3.jpg"
+      },
+      "preview" : ["tostada/preview.JPG", "tostada/preview.webp"]
+    },
     "MedCare": {
       "description": "First project in high school to help doctors in the hospitals to manage the patient",
       "language": "C",
@@ -126,42 +162,6 @@
         "3": "deck/img3.jpg"
       },
       "preview" : ["deck/preview.jpg", "deck/preview.webp"]
-    },
-    "MovieDatabaseApi": {
-      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
-      "language": ["HTML5", "CSS", "JavaScript"],
-      "type": "Website",
-      "tech": "MovieDatabase Api",
-      "year": "2020/2021",
-      "state": true,
-      "db": false,
-      "lang": "English",
-      "github": "https://github.com/joaogarrido98/MovieDatabaseAPI.git",
-      "url": "https://joaogarrido98.github.io/MovieDatabaseAPI/",
-      "images": {
-        "1": "movie/img1.jpg",
-        "2": "movie/img2.jpg",
-        "3": "movie/img3.jpg"
-      },
-      "preview" : ["movie/preview.jpg", "movie/preview.webp"]
-    },
-    "Tostadas":{
-      "description": "Website for a project in the third year of my course, allows user to search movies and then see it in detail!\n Learning about fetch and javascript.\nCurrently re-doing CSS",
-      "language": ["Kotlin"],
-      "type": "Library",
-      "tech": "",
-      "year": "2021",
-      "state": true,
-      "db": false,
-      "lang": "English",
-      "github": "https://github.com/joaogarrido98/tostada.git",
-      "url": "",
-      "images": {
-        "1": "tostadas/img1.jpg",
-        "2": "tostadas/img2.jpg",
-        "3": "tostadas/img3.jpg"
-      },
-      "preview" : ["tostada/preview.JPG", "tostada/preview.webp"]
     }
   }
 }

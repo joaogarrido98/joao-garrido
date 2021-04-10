@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tabManage();
 
+    getJson();
+
     const letsBuild = document.getElementById("letsBuild");
     letsBuild.addEventListener('click', (evt) => {
         evt.preventDefault();
@@ -39,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener("submit", submitEmail);
 
     window.addEventListener('scroll', checkPosition);
-
-    getProjects();
 
     document.querySelector("#right").addEventListener('click', () => {
         document.getElementById('row').scrollLeft += 500;
@@ -126,7 +126,6 @@ function submitEmail(event) {
     actionBtn.classList.toggle("loading");
     actionBtn.disabled = false;
 }
-
 
 function getActiveMenu() {
     let nav = document.querySelector(".nav-links");
@@ -237,63 +236,6 @@ function checkPosition() {
     }
 }
 
-function getProjects(choice) {
-    let url = "https://joaogarrido98.github.io/joao-garrido";
-    let carousel = document.querySelector(".carousel-inner");
-    carousel.innerHTML = "";
-    fetch(url + '/json/projects.json', {
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-        .then(response => {
-            return response.json();
-        })
-        .then(function (data) {
-            let projects = getJson(choice, data);
-            let i, title;
-            for (i in projects) {
-                if (projects.hasOwnProperty(i)) {
-                    title = i;
-                }
-                let project = projects[i];
-                let img = project["preview"][0];
-                let gif = project["preview"][1];
-                let fa = getFa(project["type"]);
-                let card = `<div class="tile__media">
-                  <div class="img-back" style="background-image: url('${url}/resources/${gif}');">
-                  <img class="tile__img" src="${url}/resources/${img}"/>
-                  <div class="more">
-                  <i class="${fa}"></i>
-                  <p>${title}</p>
-                  </div>
-                  </div>
-                </div>
-                `;
-                const ele = document.createElement('div');
-                ele.innerHTML = card;
-                ele.className = "tile";
-                carousel.appendChild(ele);
-            }
-        })
-        .catch(error => {
-            console.log(error);
-        })
-}
-
-function tabManage() {
-    let choice;
-    let tabs = document.getElementsByClassName('tab');
-    Array.prototype.forEach.call(tabs, function (tab) {
-        tab.addEventListener('click', (evt) => {
-            setActiveClass(evt, tabs);
-            choice = tab.id;
-            getProjects(choice);
-        });
-    });
-}
-
 function setActiveClass(evt, tabs) {
     Array.prototype.forEach.call(tabs, function (tab) {
         tab.classList.remove('chosen');
@@ -319,13 +261,90 @@ function getFa(type) {
     }
 }
 
-function getJson(choice, data){
-    if(choice === "all"){
+function getJson() {
+    let url = "https://joaogarrido98.github.io/joao-garrido";
+    //let url = ".."
+    fetch(url + '/json/projects.json', {
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+        .then(response => {
+            return response.json();
+        })
+        .then(function (data) {
+            getProjects("all", data);
+            json = data;
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
+
+let json;
+function tabManage() {
+    let choice;
+    let tabs = document.getElementsByClassName('tab');
+    Array.prototype.forEach.call(tabs, function (tab) {
+        tab.addEventListener('click', (evt) => {
+            setActiveClass(evt, tabs);
+            choice = tab.id;
+            getProjects(choice, json);
+        });
+    });
+}
+
+function getProjects(choice, data) {
+    let url = "..";
+    let projects = getType(choice, data);
+    let i, title;
+    let carousel = document.querySelector(".carousel-inner");
+    carousel.innerHTML = "";
+    for (i in projects) {
+        if (projects.hasOwnProperty(i)) {
+            title = i;
+        }
+        let project = projects[i];
+        let img = project["preview"][0];
+        let gif = project["preview"][1];
+        let fa = getFa(project["type"]);
+        let card = `<div class="tile__media">
+                  <div class="img-back" style="background-image: url('${url}/resources/${gif}');">
+                  <img class="tile__img" src="${url}/resources/${img}"/>
+                  <div class="more">
+                  <i class="${fa}"></i>
+                  <p>${title}</p>
+                  </div>
+                  </div>
+                </div>
+                `;
+        const ele = document.createElement('div');
+        ele.innerHTML = card;
+        ele.className = "tile";
+        carousel.appendChild(ele);
+    }
+}
+
+function getType(choice, data) {
+    let project;
+    if (choice === "all") {
         return projects = data["projects"];
     }
-    if(choice === "web"){
-       return projects = data["projects"];
+    if (choice === "web") {
+        let len = Object.keys(data["projects"]).length
+        for (let i = 0; i < len; i++) {
+            console.log(Object.hasOwnProperty[data]);
+        }
+        return project;
     }
-    if(choice === "android")7
-    return projects = data["projects"];
+    if (choice === "android") {
+        for (element in data["projects"]) {
+            if (element.type === "App") {
+                project.push(element);
+            }
+        }
+        return project;
+    }
+
 }
