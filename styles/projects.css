@@ -272,8 +272,8 @@
 }
 
 .projects .carousel-inner:hover .tile:hover:last-child {
-  -webkit-transform: scale(1.2) translateX(-20px);
-          transform: scale(1.2) translateX(-20px);
+  -webkit-transform: scale(1.2) translateX(-50px);
+          transform: scale(1.2) translateX(-50px);
 }
 
 .projects .tile:hover ~ .tile {
