@@ -262,8 +262,8 @@ function getFa(type) {
 }
 
 function getJson() {
-    let url = "https://joaogarrido98.github.io/joao-garrido";
-    //let url = ".."
+    //let url = "https://joaogarrido98.github.io/joao-garrido";
+    let url = ".."
     fetch(url + '/json/projects.json', {
         headers: {
             'Content-Type': 'application/json',
