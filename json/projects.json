@@ -132,7 +132,7 @@
         "2": "greenhelp_app/img2.jpg",
         "3": "greengelp_app/img3.jpg"
       },
-      "preview" : ["greenhelp_app/preview.jpg", "greenhelp_app/preview.webp"]
+      "preview" : ["greenhelp_app/preview.JPG", "greenhelp_app/preview.webp"]
     },
     {
       "name" : "EuroToPound",
