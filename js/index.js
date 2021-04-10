@@ -261,9 +261,11 @@ function getFa(type) {
     }
 }
 
+//let url = ".."
+let url = "https://joaogarrido98.github.io/joao-garrido";
+let json;
+
 function getJson() {
-    let url = "https://joaogarrido98.github.io/joao-garrido";
-    //let url = ".."
     fetch(url + '/json/projects.json', {
         headers: {
             'Content-Type': 'application/json',
@@ -282,7 +284,6 @@ function getJson() {
         })
 }
 
-let json;
 function tabManage() {
     let choice;
     let tabs = document.getElementsByClassName('tab');
@@ -295,14 +296,14 @@ function tabManage() {
     });
 }
 
-function getProjects(choice, data,url) {
+function getProjects(choice, data) {
     let projects = getType(choice, data);
     let i, title;
     let carousel = document.querySelector(".carousel-inner");
     carousel.innerHTML = "";
     for (i in projects) {
         let project = projects[i];
-        title = project.name
+        title = project.name;
         let img = project["preview"][0];
         let gif = project["preview"][1];
         let fa = getFa(project["type"]);
