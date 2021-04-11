@@ -95,15 +95,23 @@ function submitEmail(event) {
     let data = new FormData(event.target);
     if (!emailValid) {
         email.classList.add("invalid");
+        actionBtn.classList.remove("loading");
+        actionBtn.disabled = false;
     }
     if (!nameValid) {
         name.classList.add("invalid");
+        actionBtn.classList.remove("loading");
+        actionBtn.disabled = false;
     }
     if (!phoneValid) {
         phone.classList.add("invalid");
+        actionBtn.classList.remove("loading");
+        actionBtn.disabled = false;
     }
     if (!messageValid) {
         message.classList.add("invalid");
+        actionBtn.classList.remove("loading");
+        actionBtn.disabled = false;
     }
     if (emailValid && nameValid && phoneValid && messageValid) {
         fetch(event.target.action, {
@@ -278,7 +286,7 @@ function getJson() {
             return response.json();
         })
         .then(function (data) {
-            getProjects("all", data,url);
+            getProjects("all", data, url);
             json = data;
         })
         .catch(error => {
