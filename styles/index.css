@@ -43,9 +43,6 @@
 .sectionPic h2 {
   -webkit-animation: appear 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.42s backwards;
           animation: appear 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.42s backwards;
-  text-decoration: underline;
-  -webkit-text-decoration-color: var(--color-tags);
-          text-decoration-color: var(--color-tags);
 }
 
 .sectionPic .text-block {

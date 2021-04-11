@@ -27,8 +27,6 @@
 
   h2 {
     animation: appear 1.2s cubic-bezier(.215, .61, .355, 1) .42s backwards;
-    text-decoration: underline;
-    text-decoration-color: var(--color-tags);
   }
 
   .text-block {

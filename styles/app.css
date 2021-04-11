@@ -116,3 +116,8 @@ p {
 a {
   font-weight: 700;
 }
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: var(--color-tags);
+}
