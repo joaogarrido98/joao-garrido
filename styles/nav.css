@@ -1,8 +1,9 @@
 .nav {
-  margin-top: 2px;
-  height: 10%;
+  top: 2px;
+  height: auto;
   width: 100%;
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;

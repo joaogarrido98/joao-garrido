@@ -68,7 +68,6 @@ body {
   margin: 0 auto;
   max-width: 80vw;
   padding: 1rem;
-  padding-top: 3.5rem;
   color: rgba(255, 255, 255, 0.788);
 }
 
@@ -97,6 +96,8 @@ body {
 .progress-container {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   height: 2px;
   z-index: 1000;
   background: var(--color-dark);

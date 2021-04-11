@@ -1,8 +1,8 @@
 .nav {
-    margin-top: 2px;
-    height: 10%;
+    top: 2px;
+    height: auto;
     width: 100%;
-    position: fixed;
+    position: sticky;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
