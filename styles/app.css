@@ -114,9 +114,3 @@ p {
 a {
   font-weight: 700;
 }
-
-@media (max-width: 768px) {
-  .main-content {
-    padding-top: 0;
-  }
-}
