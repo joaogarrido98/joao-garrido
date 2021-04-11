@@ -44,9 +44,6 @@
   background: #555;
 }
 
-*{
-  box-sizing: border-box;
-}
 html,
 body {
   user-select: none;
@@ -67,7 +64,6 @@ body {
 
 .main-content {
   min-height: 100%;
-  justify-content: center;
   margin: 0 auto;
   max-width: 80vw;
   padding: 1rem;
@@ -75,7 +71,7 @@ body {
   color: rgba(255, 255, 255, 0.788);
 }
 
-.main-titles{
+.main-titles {
   font-size: 2em;
 }
 
@@ -117,4 +113,10 @@ p {
 
 a {
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 0;
+  }
 }
