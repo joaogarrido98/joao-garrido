@@ -271,8 +271,8 @@ function getFa(type) {
     }
 }
 
-//let url = ".."
-let url = "https://joaogarrido98.github.io/joao-garrido";
+let url = ".."
+//let url = "https://joaogarrido98.github.io/joao-garrido";
 let json;
 
 function getJson() {
