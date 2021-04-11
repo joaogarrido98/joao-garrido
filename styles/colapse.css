@@ -331,6 +331,12 @@
   text-decoration: none;
 }
 
+@media (max-width: 769px) {
+  .contactInfo .sides {
+    margin: 0;
+  }
+}
+
 @-webkit-keyframes button-anim {
   from {
     -webkit-transform: rotate(0);

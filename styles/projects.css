@@ -281,6 +281,25 @@
           transform: translate3d(50px, 0, 0);
 }
 
+@media (max-width: 500px) {
+  .projects .carousel-inner:hover .tile:hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .projects .carousel-inner:hover .tile:hover:last-child {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+  }
+  .projects .tile:hover ~ .tile {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .projects .more {
+    visibility: hidden !important;
+  }
+}
+
 @media (max-width: 768px) {
   .projects-title {
     text-align: center;

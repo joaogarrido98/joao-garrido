@@ -222,6 +222,27 @@
     }
 }
 
+@media(max-width:500px) {
+    .projects{
+        .carousel-inner:hover .tile:hover {
+            opacity: 1;
+            transform: scale(1);
+    
+            &:last-child{
+                transform:scale(1) translateX(0);
+            }
+        }
+    
+        .tile:hover~.tile {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .more{
+            visibility: hidden!important;
+        }
+    }    
+}
+
 @media(max-width: 768px) {
     .projects-title {
         text-align: center;

@@ -273,6 +273,13 @@
   }
 }
 
+@media(max-width:769px) {
+  .contactInfo {
+    .sides {
+      margin: 0;
+    }
+  }
+}
 
 @keyframes button-anim {
   from {

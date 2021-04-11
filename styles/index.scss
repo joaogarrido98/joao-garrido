@@ -19,7 +19,7 @@
       margin-bottom: 0;
       font-weight: 700;
       color: var(--color-tags);
-      line-height: 44px;
+      line-height: 1;
       font-size: 4rem;
       animation: appear 1.2s cubic-bezier(.215, .61, .355, 1) .40s backwards;
     }
@@ -52,7 +52,7 @@
 
 .time-wrapper {
   animation: helloImHere 3s ease-in-out 1s 1 forwards;
-  padding: 30px;
+  padding: 20px;
   background-color: var(--color-dark);
   border-radius: 12px;
 
@@ -355,17 +355,11 @@
 
 @media (min-width: 769px) {
   :root {
-    --translation: -100px;
+    --translation: -150px;
   }
 }
 
 @media (max-width:768px) {
-  .contactBtn {
-    color: var(--color-primary);
-    font-weight: 600;
-    background-color: var(--color-tags);
-  }
-
   .sectionPic {
     width: 100%;
     justify-content: center;
@@ -405,7 +399,7 @@
   }
 
   :root {
-    --translation: -150px;
+    --translation: -100px;
   }
 }
 
