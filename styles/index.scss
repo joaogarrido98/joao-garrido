@@ -1,7 +1,7 @@
 .sectionPic {
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 90vh;
   align-items: center;
 
   .introduction {
@@ -355,7 +355,7 @@
 
 @media (min-width: 769px) {
   :root {
-    --translation: -150px;
+    --translation: -80px;
   }
 }
 
@@ -399,7 +399,7 @@
   }
 
   :root {
-    --translation: -100px;
+    --translation: -90px;
   }
 }
 
