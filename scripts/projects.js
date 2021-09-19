@@ -23,7 +23,7 @@ function tabManager() {
 }
 
 async function fetchData(type) {
-    const response = await fetch("../json/projects.json");
+    const response = await fetch("https://github.com/joaogarrido98/joao-garrido/blob/master/json/projects.json");
     const data = await response.json();
     const projects = await getProjects(data["projects"], type);
     loadProjects(projects);
