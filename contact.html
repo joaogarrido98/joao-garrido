@@ -13,7 +13,7 @@
     <meta name="copyright" content="João Garrido" />
     <link rel="stylesheet" type="text/css" href="styles/app.css" />
     <link rel="stylesheet" type="text/css" href="styles/footer.css" />
-    <link rel="stylesheet" type="text/css" href="styles/projects.css" />
+    <link rel="stylesheet" type="text/css" href="styles/contact.css" />
     <link rel="icon" href="/resources/icon.png" type="image/icon type" />
     <title>Discover João</title>
   </head>
@@ -25,10 +25,10 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link">.toHome</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="projects.html" class="nav-link">.toProjects</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a href="contact.html" class="nav-link">.toContact</a>
           </li>
         </ul>
@@ -40,17 +40,61 @@
       </nav>
     </header>
     <div class="main">
-      <div id="projects" class="projects">
-        <h2>getProjects(<span class="properties"> ' all ' </span>)</h2>
-        <div class="tabs-wrapper">
-          <div class="tabs">
-            <button class="tab" id="web">Web</button>
-            <button class="tab chosen" id="all">All</button>
-            <button class="tab" id="app">App</button>
-            <span class="presentation-slider"></span>
-          </div>
+      <div class="form-wrapper">
+        <div class="form-inner">
+          <h1>Let's create <strong>magic</strong></h1>
+          <p>Send me a quick message</p>
+          <form id="form">
+            <div class="input">
+              <input
+                autocapitalize="off"
+                id="name"
+                type="text"
+                class="input-field"
+                required
+              />
+              <label class="input-label"
+                >Name<span class="asterisk">*</span></label
+              >
+              <small></small>
+            </div>
+            <div class="input">
+              <input
+                autocapitalize="off"
+                id="email"
+                type="text"
+                class="input-field"
+                required
+              />
+              <label class="input-label"
+                >Email<span class="asterisk">*</span></label
+              >
+              <small></small>
+            </div>
+            <div class="input">
+              <textarea
+                autocapitalize="off"
+                rows="6"
+                id="message"
+                class="input-field"
+                required
+              ></textarea>
+              <label class="input-label"
+                >Message<span class="asterisk">*</span></label
+              >
+              <small></small>
+            </div>
+            <button class="submit_btn">
+              <span class="button_text">Send</span>
+            </button>
+            <p style="margin-top: 10px; text-align: center">
+              By using this form you agree with the storage and handling of your
+              data by this website. Please read our
+              <a target="blank" href="privacy.html">Privacy Policy</a> for more
+              information on how I handle your data.
+            </p>
+          </form>
         </div>
-        <div class="projects_gallery"></div>
       </div>
     </div>
     <section class="footer">
@@ -85,6 +129,6 @@
     </section>
     <script src="https://use.fontawesome.com/7133e37c5e.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="scripts/projects.js"></script>
+    <script src="scripts/contact.js"></script>
   </body>
 </html>

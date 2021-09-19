@@ -4,177 +4,132 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: var(--color-dark);
-  padding: 50px 30px 10px 30px;
   position: relative;
-  margin-top: 8rem;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 50px 20px 0 20px;
 }
 
 .footer h2 {
-  margin-top: 4rem;
   text-align: center;
-  color: rgba(255, 255, 255, 0.788);
-  font-size: calc(0.9rem + 2vmin);
+  color: var(--text-color);
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--main-color);
+  text-decoration-color: var(--main-color);
 }
 
-.footer .copyright {
-  margin-bottom: 0;
-  margin-top: 1rem;
+.copyright {
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
   max-width: 100%;
-  color: rgba(255, 255, 255, 0.788);
-  font-size: calc(0.3rem + 2vmin);
 }
 
-.footer .contactUs {
-  border: 2px solid var(--color-light);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  border-radius: 12px;
-  margin-top: -7rem;
-  width: 85%;
-  height: auto;
-  padding: 30px;
-  background: url(../resources/contactUS.webp) no-repeat fixed;
-  background-size: cover;
-  background-position: center center;
-}
-
-.footer .contactUs .columns {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-
-.footer .contactUs .columns:nth-child(1) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 350px;
-          flex: 1 1 350px;
-}
-
-.footer .contactUs .columns h1 {
-  font-size: 1.8rem;
-  color: rgba(255, 255, 255, 0.788);
+.created {
+  color: var(--main-color);
   font-weight: 600;
-  line-height: 1.125;
-  margin-bottom: 0;
-  letter-spacing: 2px;
 }
 
-.footer .contactUs .columns p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.788);
-  max-width: 100%;
-  margin-top: 0.67em;
-}
-
-.footer .social {
+.social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-.footer .social a {
-  color: rgba(255, 255, 255, 0.788);
-  background: var(--color-tertiary);
+.footer a {
+  font-family: fontawesome;
+  background: var(--highlight-color);
   border-radius: 50%;
   text-decoration: none;
-  font-family: fontawesome;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   margin: 10px 20px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  -webkit-font-smoothing: antialiased;
 }
 
-.footer .social a:nth-of-type(1):hover {
-  color: var(--facebook-blue);
+.footer a:nth-of-type(1):hover {
   border: 3px solid var(--facebook-blue);
 }
 
-.footer .social a:nth-of-type(2):hover {
-  color: var(--github-purple);
+.footer a:nth-of-type(1):hover i {
+  color: var(--facebook-blue);
+}
+
+.footer a:nth-of-type(2):hover {
   border: 3px solid var(--github-purple);
 }
 
-.footer .social a:nth-of-type(3):hover {
-  color: var(--linkedin-blue);
+.footer a:nth-of-type(2):hover i {
+  color: var(--github-purple);
+}
+
+.footer a:nth-of-type(3):hover {
   border: 3px solid var(--linkedin-blue);
 }
 
-.footer .social a:nth-of-type(4):hover {
-  color: var(--stackoverflow-orange);
+.footer a:nth-of-type(3):hover i {
+  color: var(--linkedin-blue);
+}
+
+.footer a:nth-of-type(4):hover {
   border: 3px solid var(--stackoverflow-orange);
 }
 
-.footer .social a:nth-of-type(5):hover {
-  color: var(--spotify-green);
+.footer a:nth-of-type(4):hover i {
+  color: var(--stackoverflow-orange);
+}
+
+.footer a:nth-of-type(5):hover {
   border: 3px solid var(--spotify-green);
 }
 
-.footer .social a:hover > i {
-  -webkit-animation: toBottomFromTop 0.5s var(--te) both;
-          animation: toBottomFromTop 0.5s var(--te) both;
+.footer a:nth-of-type(5):hover i {
+  color: var(--spotify-green);
 }
 
-.footer .social a i {
-  position: static;
-  font-style: normal;
+.footer a:hover > i {
+  -webkit-animation: toBottomFromTop 0.5s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  animation: toBottomFromTop 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
 @-webkit-keyframes toBottomFromTop {
   49% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
   50% {
     opacity: 0;
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   51% {
     opacity: 1;
@@ -184,15 +139,20 @@
 @keyframes toBottomFromTop {
   49% {
     -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
   50% {
     opacity: 0;
     -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    transform: translateY(-100%);
   }
   51% {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=footer.css.map */
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
