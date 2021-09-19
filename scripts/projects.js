@@ -61,7 +61,7 @@ function loadProjects(projects) {
         const description = element.description;
         const preview_image = element["preview"][0];
         const card = `
-                    <img class="preview_image" src="../resources/${preview_image}"/>
+                    <img class="preview_image" src="resources/${preview_image}"/>
                     <div class="show">
                         <div class="project_info">
                             <p class="title">${title}</p>
