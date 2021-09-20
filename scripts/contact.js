@@ -30,11 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     toggleButtonAnimation(false)
                 }
             }).catch(err => {
-                form.reset();
-                const inputClass = "input-field";
-                name.className = inputClass;
-                email.className = inputClass;
-                message.className = inputClass;
                 toggleButtonAnimation(false);
             });
         }

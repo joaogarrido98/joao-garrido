@@ -132,6 +132,14 @@ small {
   background: var(--main-color-dark);
 }
 
+.not-sent:hover {
+  background: var(--invalid-red);
+}
+
+.sent:hover {
+  background: var(--valid-green);
+}
+
 .button_text {
   font-size: 1.25rem;
   font-weight: 600;
