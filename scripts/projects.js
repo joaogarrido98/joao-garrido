@@ -66,7 +66,7 @@ function loadProjects(projects) {
                         <div class="project_info">
                             <p class="title">${title}</p>
                             <p>${description}</p>
-                            <a href="https://joaogarrido98.github.io/joao-garrido/project.html?title=${title}">View Project</a>
+                            <a href="project.html?title=${title}">View Project</a>
                         </div>
                     </div>
                     `;
