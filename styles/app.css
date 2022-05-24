@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --main-color: #744dff;
-  --main-color-dark: #4c33a5;
-  --secondary-color: #7c4dff46;
+  --main-color: #ed9950;
+  --main-color-dark: #e38928;
+  --secondary-color: #ffac4d46;
   --color-dark: #1f1e20;
   --background-color: #141616;
   --highlight-color: #333435;
@@ -107,7 +107,7 @@ a {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: space-evenly;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
